@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../components/ui/Button";
 
 export default {
@@ -6,4 +5,7 @@ export default {
   component: Button,
 };
 
-export const Default = () => <Button>Hello Button</Button>;
+export const Small = () => <Button size="sm">Small Button</Button>;
+export const Medium = () => <Button size="md">Medium Button</Button>;
+export const Large = () => <Button size="lg">Large Button</Button>;
+export const ExtraLarge = () => <Button size="xl">Extra Large Button</Button>;
