@@ -6,6 +6,7 @@ Simple user management app with login / reset password and profil page.
 
 React / Tailwind / Storybook / Chromatic / Figma
 
+### RUN IT !
 ```bash
 npm i
 npm run dev
