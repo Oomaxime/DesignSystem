@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --default-font-color: #080808;
+    --cta-primary-bg-default: #0B2D46;
+    --cta-primary-bg-hover: #0A649A;
+    --input-text-background: #E1F1FD;
+}
+
