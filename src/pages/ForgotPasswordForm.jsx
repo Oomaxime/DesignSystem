@@ -1,7 +1,5 @@
 export default function ForgotPasswordForm() {
   return (
-    <div>
-      
-    </div>
+    <form>formulaire</form>
   )
 }

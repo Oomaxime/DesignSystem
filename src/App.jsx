@@ -7,6 +7,8 @@ import FormLayout from "./layouts/FormLayout"
 // Pages
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
+import ConnexionForm from "./pages/ConnexionForm"
+import ForgotPasswordForm from "./pages/ForgotPasswordForm"
 
 
 function App() {
@@ -18,9 +20,9 @@ function App() {
           <Route index element={<Home />} />
         </Route>
 
-        <Route element={<FormLayout />}>
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
+        <Route path="auth" element={<FormLayout />}>
+          <Route path="connexion" element={<ConnexionForm/>} />
+          <Route path="forgotpassword" element={<ForgotPasswordForm/>} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
