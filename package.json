@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_cf4208531d5bd83"
+    "chromatic": "npx chromatic --project-token=chpt_cf4208531d5bd83",
+    "chromatic-exit": "chromatic --exit-zero-on-changes"
   },
   "dependencies": {
     "react": "^18.3.1",
