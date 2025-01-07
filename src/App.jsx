@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 // Layouts
 import MainLayout from "./layouts/MainLayout"
+import FormLayout from "./layouts/FormLayout"
 
 // Pages
 import Home from "./pages/Home"
@@ -15,8 +16,14 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
+
+        <Route element={<FormLayout />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+        </Route>
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
