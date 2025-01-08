@@ -1,31 +1,26 @@
 import PropTypes from "prop-types";
 
-const sizeClasses = {
-  sm: "w-4 h-4", // 16px
-  md: "w-6 h-6", // 24px
-  lg: "w-8 h-8", // 32px
-};
+const defaultClasses = "w-full input-bg border border-gray-300 rounded-md p-2 ";
 
-const defaultClasses = "inline-flex";
-
-function Input({ size = "md", type = "text", placeholder = "", value = "", }) {
+function Input({ type = "text", placeholder = "", value = "", onChange }) {
   return (
     <>
       <input
-        className={`${defaultClasses} ${sizeClasses[size]}`}
-        type="text"
+        className={`${defaultClasses}`}
+        type={type}
         placeholder={placeholder}
         value={value}
+        onChange={onChange}
       />
     </>
   );
 }
 
 Input.propTypes = {
-  size: PropTypes.oneOf(["sm", "md", "lg"]),
   type: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default Input;

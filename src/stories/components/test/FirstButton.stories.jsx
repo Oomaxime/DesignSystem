@@ -1,5 +1,5 @@
 export default {
-    title: "Example/Test",
+    title: "Test/Test",
 };
 
 export const TestStory = () => <button>Test Button</button>;

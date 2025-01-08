@@ -1,9 +1,9 @@
-import Icon from "../components/ui/Icon";
+import Icon from "../../../components/ui/Icon";
 import { TfiLayoutWidthDefaultAlt } from "react-icons/tfi";
 import { MdDashboardCustomize } from "react-icons/md";
 
 export default {
-  title: "Components/Icon",
+  title: "Components/ui/Icon",
   component: Icon,
   argTypes: {
     size: {

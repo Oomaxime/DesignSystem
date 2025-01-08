@@ -1,10 +1,10 @@
 import React from "react";
-import Form from "../components/ui/Form";
-import Input from "../components/ui/Input";
-import Button from "../components/ui/Button";
+import Form from "../../../components/ui/Form";
+import Input from "../../../components/ui/Input";
+import Button from "../../../components/ui/Button";
 
 export default {
-  title: "Components/Form",
+  title: "Components/form/Form",
   component: Form,
 };
 
