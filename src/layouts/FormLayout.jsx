@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom"
-import img from "../assets/images/illustre_auth_form.png";
+import img from "../assets/images/illustre_auth_form.avif";
+import imgWebp from "../assets/images/illustre_auth_form.webp";
 
 export default function FormLayout() {
   return (
@@ -8,10 +9,15 @@ export default function FormLayout() {
         <Outlet/>
       </aside>
       <aside className="w-full h-screen p-2">
-        <img
-          src={img}
-          className="w-full h-full object-cover rounded-xl"
-        />
+        <picture className="w-full h-full">
+          <source srcSet={imgWebp} type="image/webp" />
+          <source srcSet={img} type="image/avif" />
+          <img
+            src={img}
+            alt="Illustration du formulaire"
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </picture>
       </aside>
     </main>
   )
