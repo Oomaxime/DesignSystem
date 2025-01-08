@@ -8,14 +8,14 @@ export default function FormLayout() {
       <aside className="flex justify-center items-center md:h-screen md:w-full p-6">
         <Outlet/>
       </aside>
-      <aside className="h-3/10 md:w-full md:h-screen md:p-6">
+      <aside className="h-3/10 md:w-full md:h-screen">
         <picture className="w-full h-full">
           <source srcSet={imgWebp} type="image/webp" />
           <source srcSet={img} type="image/avif" />
           <img
             src={img}
             alt="Illustration du formulaire"
-            className="w-full max-h-40 rounded-xl p-2 object-cover md:h-full md:max-h-full"
+            className="w-full max-h-40 rounded-xl p-2 object-cover md:p-0 md:h-full md:max-h-full md:rounded-none"
           />
         </picture>
       </aside>
