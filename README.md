@@ -11,3 +11,10 @@ React / Tailwind / Storybook / Chromatic / Figma
 npm i
 npm run dev
 ```
+`http://localhost:5173/`
+
+## Start story book:
+```bash
+npm run storybook
+```
+`http://localhost:6006/`
