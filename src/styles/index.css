@@ -10,7 +10,7 @@
     --cta-primary-bg-hover: #0A649A;
     --cta-primary-bg-inactive: #83CFF9;
     --cta-primary-border-radius: 12px;
-    --cta-primary-padding: 16px 0;
+    --cta-primary-padding: 14px 0;
     --cta-primary-font-color: #fff;
 
     /* Input */
@@ -18,7 +18,7 @@
     --input-border-radius: 10px;
     --input-border-color: #888;
     --input-border-color-focus: #0B7BD2;
-    --input-padding: 16px 20px;
+    --input-padding: 12px 14px;
 }
 
 @layer components {
@@ -28,7 +28,10 @@
         border-radius: var(--cta-primary-border-radius);
         padding: var(--cta-primary-padding);
         color: var(--cta-primary-font-color);
+        line-height: 1;
+        font-size: 16px;
     }
+
     .input {
         width: 100%;
         background-color: var(--input-text-background);
@@ -36,6 +39,8 @@
         border: 1px solid var(--input-border-color);
         padding: var(--input-padding);
         outline: none;
+        line-height: 1;
+        font-size: 16px;
     }
     .input:focus {
         border-color: var(--input-border-color-focus);
