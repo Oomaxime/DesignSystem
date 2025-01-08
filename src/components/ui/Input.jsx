@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-const defaultClasses = "w-full input-bg border border-gray-300 rounded-md p-2 ";
+const defaultClasses = "input";
 
-function Input({ type = "text", placeholder = "", value = "", onChange }) {
+export default function Input({ type = "text", placeholder = "", value = "", onChange }) {
   return (
     <>
       <input
@@ -22,5 +22,3 @@ Input.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
 };
-
-export default Input;

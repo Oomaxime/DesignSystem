@@ -21,7 +21,7 @@ function App() {
         </Route>
 
         <Route path="auth" element={<FormLayout />}>
-          <Route path="connexion" element={<ConnexionForm/>} />
+          <Route path="login" element={<ConnexionForm/>} />
           <Route path="forgotpassword" element={<ForgotPasswordForm/>} />
         </Route>
 
