@@ -48,6 +48,6 @@
     }
 
     .form {
-        @apply flex md:w-1/2 md:gap-14 gap-5 flex-col w-full p-2;
+        @apply flex gap-5 flex-col w-full p-2 max-w-96;
     }
 }

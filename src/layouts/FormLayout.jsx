@@ -15,7 +15,7 @@ export default function FormLayout() {
           <img
             src={img}
             alt="Illustration du formulaire"
-            className="w-full max-h-40 rounded-xl object-cover md:h-full md:max-h-full"
+            className="w-full max-h-40 rounded-xl p-2 object-cover md:h-full md:max-h-full"
           />
         </picture>
       </aside>
