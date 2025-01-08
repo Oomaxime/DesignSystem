@@ -17,7 +17,6 @@ export default function Button({ children, onClick, active }) {
 }
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired,
   active: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
