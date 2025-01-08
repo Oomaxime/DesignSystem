@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 export default function Button({ children, size = "md" }) {
   // Classes Tailwind conditionnelles pour la taille
@@ -15,3 +15,8 @@ export default function Button({ children, size = "md" }) {
     </button>
   );
 }
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  size: PropTypes.oneOf(["sm", "md", "lg", "xl"]),
+};

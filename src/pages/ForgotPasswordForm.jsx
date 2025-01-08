@@ -5,16 +5,16 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function ForgotPasswordForm() {
-  const [name, setName] = useState('')
-  const [password, setPassword] = useState('')
+  const [name, setName] = useState('') // Supprimé password et setPassword
+
   return (
     <Form
       onSubmit={(e) => {
         e.preventDefault()
-        alert(`Name: ${name}, Password: ${password}`)
+        alert(`Name: ${name}`)
       }}
     >
-      <h1 className="text-3xl font-bold">Can't remember your password ?</h1>
+      <h1 className="text-3xl font-bold">Can&apos;t remember your password?</h1>
       <label htmlFor="">Email</label>
       <Input
         type="text"
@@ -25,7 +25,12 @@ export default function ForgotPasswordForm() {
       <Button onClick={() => {}} active={true}>
         Submit
       </Button>
-      <p className="text-center">Do you have a Account ? <Link to={"login"} className="text-blue-500 hover:underline">Login</Link></p>
+      <p className="text-center">
+        Do you have an Account?{' '}
+        <Link to={"login"} className="text-blue-500 hover:underline">
+          Login
+        </Link>
+      </p>
     </Form>
   )
 }
