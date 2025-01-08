@@ -17,7 +17,7 @@ export default function ConnexionForm() {
       <h1 className="text-3xl font-bold">Welcome Back !</h1>
       <h2>Today is a new day. It's your day. You shape it.<br />Sign in to start managing your projects.</h2>
 
-      <div className=''> 
+      <div className='flex flex-col gap-3'>
         <label>Email</label>
         <Input
           type="text"
@@ -26,7 +26,7 @@ export default function ConnexionForm() {
           onChange={(e) => setName(e.target.value)}
         />
       </div>
-      <div className=''>
+      <div className='flex flex-col gap-3'>
         <label>Password</label>
         <Input
           type="password"
