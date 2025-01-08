@@ -43,9 +43,6 @@
     }
 
     .form {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
+        @apply flex md:w-1/2 md:gap-14 gap-5 flex-col w-full p-2;
     }
 }
