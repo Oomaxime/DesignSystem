@@ -1,22 +1,23 @@
 import PropTypes from "prop-types";
 
-const defaultClasses = "";
+const Text = ({ type, weight, children }) => {
+  const classNames = `${type} ${weight}`;
 
-const typeClasses = {
-  h1: "text-2xl",
-  h2: "text-xl",
-  h3: "text-lg",
-  h4: "text-base",
-  h5: "text-sm",
-  h6: "text-xs",
+  return (
+    <p className={classNames}>
+      {children}
+    </p>
+  );
 };
 
-export default function Text({ children, type }) {
-  return (
-    <span
-      className={`${defaultClasses} ${typeClasses[type]}`}
-    >
-      {children}
-    </span>
-  );
-}
+Text.propTypes = {
+  type: PropTypes.oneOf(["h1", "h2", "h3", "h4", "body", "label"]).isRequired,
+  weight: PropTypes.oneOf(["bold", "regular", "thin"]),
+  children: PropTypes.node.isRequired,
+};
+
+Text.defaultProps = {
+  weight: "regular",
+};
+
+export default Text;
