@@ -17,52 +17,61 @@ export default function UserForm() {
           alert(`Username: ${username}, Name: ${name}, Password: ${password} , RepeatPassword: ${rpassword}`)
         }}
     >
+      <div>
+        <h1 className="text-5xl font-bold text-center">Edit Profil</h1>
+        <br/>
+        <h2 className="font-light text-xl text-center">Change your personal data</h2>
+      </div>
+      <div className='flex flex-col gap-10'>
+        <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-1 ">
+            <label>Username</label>
+            <Input
+              type="text"
+              placeholder="Enter text here"
+              value={name}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="flex flex-col gap-1">
+            <label>Email</label>
+            <Input
+              type="text"
+              placeholder="Enter text here"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+        </div>
 
-      <h1 className="text-3xl font-bold text-center">Edit Profile</h1>
-      <h2 className="text-center">Change your personal data</h2>
-      <div className="flex flex-col gap-1 ">
-        <label>Username</label>
-        <Input
-          type="text"
-          placeholder="Username"
-          value={name}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+        <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-1">
+            <label>Password</label>
+            <Input
+              type="password"
+              placeholder="................"
+              value={name}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <label>Confirm Password</label>
+            <Input
+              type="password"
+              placeholder="................"
+              value={name}
+              onChange={(e) => setRpassword(e.target.value)}
+            />
+          </div>
+        </div>
       </div>
 
-      <div className="flex flex-col gap-1">
-        <label>Email</label>
-        <Input
-          type="text"
-          placeholder="Email"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+      <div className="flex flex-col mt-6">
+        <Button onClick={() => {}} active={true}>
+          Save
+        </Button>
       </div>
-
-      <div className="flex flex-col gap-1">
-        <label>Password</label>
-        <Input
-          type="password"
-          placeholder="Password"
-          value={name}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-
-      <div className="flex flex-col gap-1">
-        <label>Confirm Password</label>
-        <Input
-          type="password"
-          placeholder="Confirm password"
-          value={name}
-          onChange={(e) => setRpassword(e.target.value)}
-        />
-      </div>
-
-      <Button onClick={() => {}} active={true}>
-        Save change
-      </Button>
     </Form>    
   )
 }

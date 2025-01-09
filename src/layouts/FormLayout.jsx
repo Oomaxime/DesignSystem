@@ -1,19 +1,16 @@
 import { Outlet } from "react-router-dom"
-import img from "../assets/images/illustre_auth_form.avif";
-import imgWebp from "../assets/images/illustre_auth_form.webp";
+import img from "../assets/images/bg.avif";
 
 export default function FormLayout() {
   return (
-    <main className="flex flex-col-reverse md:flex-row md:min-h-screen">
+    <main className="flex flex-col-reverse md:flex-row md:min-w-screen">
       <aside className="flex justify-center items-center p-6 
                         md:h-screen md:px-16 md:pt-32 
-                        md:justify-normal md:block
-                        md:max-w-fi">
+                        md:justify-normal md:block">
         <Outlet/>
       </aside>
       <aside className="h-3/10 md:w-1/2 md:h-screen flex-grow">
         <picture className="w-full h-full">
-          <source srcSet={imgWebp} type="image/webp" />
           <source srcSet={img} type="image/avif" />
           <img
             src={img}
