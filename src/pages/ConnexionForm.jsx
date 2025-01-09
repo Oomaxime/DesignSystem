@@ -14,38 +14,44 @@ export default function ConnexionForm() {
         alert(`Name: ${name}, Password: ${password}`)
       }}
     >
-      <h1 className="text-3xl font-bold text-center">Welcome Back !</h1>
-      <h2 calssName="text-center">
-        Today is a new day. It&apos;s your day. You shape it.<br />
-        Sign in to start managing your projects.
-      </h2>
+      <div>
+        <h1 className="font-bold text-center text-5xl">Welcome Back👋</h1>
+        <h2 className="font-light text-center text-xl mt-4">
+          Let's make big things together!
+        </h2>
+      </div>
 
-      <div className="flex flex-col gap-3">
-        <label>Email</label>
-        <Input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+      <div className='flex flex-col gap-1'>
+        <div className="flex flex-col">
+          <label>Email</label>
+          <Input
+            type="text"
+            placeholder="your@mail.com"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div className="flex flex-col pb-10">
+          <label>Password</label>
+          <Input
+            type="password"
+            placeholder="................"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div>
+          <Button onClick={() => {}} active={true}>
+            Sign in
+          </Button>
+
+          <p className="text-end underline mt-2">
+            <Link to={"forgotpassword"} className="text-blue-500 hover:underline">
+              Forgot Password?
+            </Link>
+          </p>
+        </div>
       </div>
-      <div className="flex flex-col gap-3">
-        <label>Password</label>
-        <Input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <p className="text-end">
-        <Link to={"forgotpassword"} className="text-blue-500 hover:underline">
-          Forgot Password ?
-        </Link>
-      </p>
-      <Button onClick={() => {}} active={true}>
-        Submit
-      </Button>
     </Form>
   )
 }

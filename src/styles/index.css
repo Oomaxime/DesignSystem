@@ -180,6 +180,6 @@ body {
     }
 
     .form {
-        @apply flex gap-5 flex-col w-full p-2 max-w-96;
+        @apply flex gap-8 flex-col w-96;
     }
 }
