@@ -22,7 +22,7 @@ function App() {
         <Route path="home" element={<MainLayout />}>
           <Route index element={<Home />} />
         </Route>
-
+ 
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
