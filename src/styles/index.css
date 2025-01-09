@@ -1,11 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
     --default-font-color: #080808;
+
+    /* CTA */
+    /* ================================== */
     --cta-primary-bg-default: #0B2D46;
     --cta-primary-bg-hover: #0A649A;
+    --cta-primary-bg-inactive: #83CFF9;
+
+    --cta-primary-border-radius: 12px;
+
+    --cta-primary-padding: 14px 0;
+
+    --cta-primary-font-color: #fff;
+
+    /* Input */
+    /* ================================== */
     --input-text-background: #E1F1FD;
+
+    --input-border-color: #888;
+    --input-border-color-active: #0B7BD2;
+
+    --input-border-radius: 10px;
+
+    --input-padding: 12px 14px;
+
+    --input-placeholder-color-default: #888;
+    --input-placeholder-color-active: #454545;
+
+
+    /* Alert */
+    /* ================================== */
+    --error-color: #E25153;
+
+    /* Icon */
+    /* ================================== */
+    --icon-color: #0B2D46;
+    --icon-color-hover: #83CFF6;
+    --icon-color-active: #0B2D46;
+
+    /* Toggle */
+    /* ================================== */
+    --toggle-bg: #83CFF6;
+    --toggle-pin-bg: #0B2D46;
+    --toggle-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    /* Typo */
+    /* ================================== */
+    --font-family: "Roboto", serif;
+
+    /* H1 */
+    --h1-font-size: 48px;
+    --h1-line-height: 48px;
+    --h1-font-weight-regular: 400;
+    --h1-font-weight-bold: 600;
+    --h1-font-weight-thin: 300;
+
+    /* H2 */
+    --h2-font-size: 32px;
+    --h2-line-height: 32px;
+    --h2-font-weight-regular: 400;
+    --h2-font-weight-bold: 600;
+    --h2-font-weight-thin: 300;
+
+    /* H3 */
+    --h3-font-size: 16px;
+    --h3-line-height: 16px;
+    --h3-font-weight-regular: 400;
+    --h3-font-weight-bold: 600;
+    --h3-font-weight-thin: 300;
+
+
+    /* H4 */
+    --h4-font-size: 8px;
+    --h4-line-height: 8px;
+    --h4-font-weight-regular: 400;
+    --h4-font-weight-bold: 600;
+    --h4-font-weight-thin: 300;
+
+    /* Body */
+    --body-font-size: 8px;
+    --body-line-height: 8px;
+    --body-font-weight-regular: 400;
+    --body-font-weight-bold: 600;
+    --body-font-weight-thin: 300;
+
+    /* LabelButton */
+    --label-font-size: 16px;
+    --label-line-height: 16px;
+    --label-font-weight: 400;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+@layer components {
+    .btn-primary {
+        width: 100%;
+        background-color: var(--cta-primary-bg-default);
+        border-radius: var(--cta-primary-border-radius);
+        padding: var(--cta-primary-padding);
+        color: var(--cta-primary-font-color);
+        line-height: 1;
+        font-size: 16px;
+    }
+
+    .input {
+        width: 100%;
+        background-color: var(--input-text-background);
+        border-radius: var(--input-border-radius);
+        border: 1px solid var(--input-border-color);
+        padding: var(--input-padding);
+        outline: none;
+        line-height: 1;
+        font-size: 16px;
+    }
+    .input:focus {
+        border-color: var(--input-border-color-focus);
+        outline: 1px solid var(--input-border-color-focus);
+    }
+
+    .form {
+        @apply flex gap-5 flex-col w-full p-2 max-w-96;
+    }
+}
