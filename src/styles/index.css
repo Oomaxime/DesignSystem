@@ -6,20 +6,61 @@
     --default-font-color: #080808;
 
     /* CTA */
+    /* ================================== */
     --cta-primary-bg-default: #0B2D46;
     --cta-primary-bg-hover: #0A649A;
     --cta-primary-bg-inactive: #83CFF9;
+
     --cta-primary-border-radius: 12px;
+
     --cta-primary-padding: 14px 0;
+
     --cta-primary-font-color: #fff;
 
     /* Input */
+    /* ================================== */
     --input-text-background: #E1F1FD;
-    --input-border-radius: 10px;
+
     --input-border-color: #888;
-    --input-border-color-focus: #0B7BD2;
+    --input-border-color-active: #0B7BD2;
+
+    --input-border-radius: 10px;
+
     --input-padding: 12px 14px;
+
+    --input-placeholder-color-default: #888;
+    --input-placeholder-color-active: #454545;
+
+
+    /* Alert */
+    /* ================================== */
+    --error-color: #E25153;
+
+    /* Icon */
+    /* ================================== */
+    --icon-color: #0B2D46;
+    --icon-color-hover: #83CFF6;
+    --icon-color-active: #0B2D46;
+
+    /* Toggle */
+    /* ================================== */
+    --toggle-bg: #83CFF6;
+    --toggle-pin-bg: #0B2D46;
+    --toggle-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @layer components {
     .btn-primary {
