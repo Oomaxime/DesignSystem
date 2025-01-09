@@ -14,13 +14,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<MainLayout />}>
-          <Route index element={<Home />} />
+        <Route element={<FormLayout />}>
+          <Route index element={<ConnexionForm />} />
+          <Route path="forgotpassword" element={<ForgotPasswordForm />} />
         </Route>
 
-        <Route path="auth" element={<FormLayout />}>
-          <Route path="login" element={<ConnexionForm />} />
-          <Route path="forgotpassword" element={<ForgotPasswordForm />} />
+        <Route path="home" element={<MainLayout />}>
+          <Route index element={<Home />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
