@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,6 +49,51 @@
     --toggle-bg: #83CFF6;
     --toggle-pin-bg: #0B2D46;
     --toggle-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    /* Typo */
+    /* ================================== */
+    --font-family: "Roboto", serif;
+
+    /* H1 */
+    --h1-font-size: 48px;
+    --h1-line-height: 48px;
+    --h1-font-weight-regular: 400;
+    --h1-font-weight-bold: 600;
+    --h1-font-weight-thin: 300;
+
+    /* H2 */
+    --h2-font-size: 32px;
+    --h2-line-height: 32px;
+    --h2-font-weight-regular: 400;
+    --h2-font-weight-bold: 600;
+    --h2-font-weight-thin: 300;
+
+    /* H3 */
+    --h3-font-size: 16px;
+    --h3-line-height: 16px;
+    --h3-font-weight-regular: 400;
+    --h3-font-weight-bold: 600;
+    --h3-font-weight-thin: 300;
+
+
+    /* H4 */
+    --h4-font-size: 8px;
+    --h4-line-height: 8px;
+    --h4-font-weight-regular: 400;
+    --h4-font-weight-bold: 600;
+    --h4-font-weight-thin: 300;
+
+    /* Body */
+    --body-font-size: 8px;
+    --body-line-height: 8px;
+    --body-font-weight-regular: 400;
+    --body-font-weight-bold: 600;
+    --body-font-weight-thin: 300;
+
+    /* LabelButton */
+    --label-font-size: 16px;
+    --label-line-height: 16px;
+    --label-font-weight: 400;
 }
 
 
