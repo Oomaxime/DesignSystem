@@ -14,7 +14,7 @@ export default function ForgotPasswordForm() {
         alert(`Name: ${name}`)
       }}
     >
-      <h1 className="text-3xl font-bold">Can&apos;t remember your password?</h1>
+      <h1 className="text-3xl font-bold text-center">Can&apos;t remember your password?</h1>
       <label htmlFor="">Email</label>
       <Input
         type="text"
