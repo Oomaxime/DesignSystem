@@ -17,7 +17,7 @@ export default function MainLayout() {
                 className="rounded-full"
               />
             </picture>
-            <p className="font-bold">John Doe</p>
+            <p className="font-bold h-4">John Doe</p>
             <a href ="../auth/login" className="underline">Logout</a>
             <p className="underline mt-5">Help</p>
           </div>
