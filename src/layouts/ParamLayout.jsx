@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
 import img from "../assets/images/illustre_auth_form.avif";
 import imgWebp from "../assets/images/illustre_auth_form.webp";
+import Toggle from "../components/ui/Toggle";
 
 
 export default function MainLayout() {
@@ -31,7 +32,7 @@ export default function MainLayout() {
         <Outlet/>
       </div>
       <div>
-        <button className="my-10 mr-10">bonsoir</button>
+        <button className="my-10 mr-10"><Toggle/></button>
       </div>
     </main>
   )
