@@ -5,4 +5,11 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react()],
   base: "/DesignSystem/",
+  build: {
+    rollupOptions: {
+      input: {
+        main: "./index.html",
+      },
+    },
+  },
 });

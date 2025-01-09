@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Layouts
-import MainLayout from "/layouts/MainLayout";
-import FormLayout from "/layouts/FormLayout";
+import MainLayout from "./layouts/MainLayout";
+import FormLayout from "./layouts/FormLayout";
 
 // Pages
-import Home from "/pages/Home";
-import NotFound from "/pages/NotFound";
-import ConnexionForm from "/pages/ConnexionForm";
-import ForgotPasswordForm from "/pages/ForgotPasswordForm";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import ConnexionForm from "./pages/ConnexionForm";
+import ForgotPasswordForm from "./pages/ForgotPasswordForm";
 
 function App() {
   return (
