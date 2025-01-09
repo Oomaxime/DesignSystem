@@ -14,8 +14,8 @@ export default function ConnexionForm() {
         alert(`Name: ${name}, Password: ${password}`)
       }}
     >
-      <h1 className="text-3xl font-bold">Welcome Back !</h1>
-      <h2>
+      <h1 className="text-3xl font-bold text-center">Welcome Back !</h1>
+      <h2 calssName="text-center">
         Today is a new day. It&apos;s your day. You shape it.<br />
         Sign in to start managing your projects.
       </h2>
@@ -40,7 +40,7 @@ export default function ConnexionForm() {
       </div>
       <p className="text-end">
         <Link to={"forgotpassword"} className="text-blue-500 hover:underline">
-          Forgot Password
+          Forgot Password ?
         </Link>
       </p>
       <Button onClick={() => {}} active={true}>

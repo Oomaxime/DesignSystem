@@ -18,7 +18,9 @@ export default function UserForm() {
         }}
     >
 
-      <div className="flex flex-col gap-1">
+      <h1 className="text-3xl font-bold text-center">Edit Profile</h1>
+      <h2 className="text-center">Change your personal data</h2>
+      <div className="flex flex-col gap-1 ">
         <label>Username</label>
         <Input
           type="text"
