@@ -1,7 +1,22 @@
+import PropTypes from "prop-types";
 
+const defaultClasses = "";
 
-export default function Text() {
+const typeClasses = {
+  h1: "text-2xl",
+  h2: "text-xl",
+  h3: "text-lg",
+  h4: "text-base",
+  h5: "text-sm",
+  h6: "text-xs",
+};
+
+export default function Text({ children, type }) {
   return (
-    <div>Text</div>
-  )
+    <span
+      className={`${defaultClasses} ${typeClasses[type]}`}
+    >
+      {children}
+    </span>
+  );
 }
