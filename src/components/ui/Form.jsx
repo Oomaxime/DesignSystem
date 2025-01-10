@@ -11,22 +11,26 @@ export default function Form({ children, onSubmit, h1 = "Title", h2 = "", button
       onSubmit={onSubmit}
       className={defaultClasses}
     >
-      <h1 className="text-3xl font-bold text-center">
-        <Text type="main-title">
-          {h1}
-        </Text>
-      </h1>
-      {h2 && (
-        <h2 className="text-center">
-          <Text type="tagline">{h2}</Text>
-        </h2>
-      )}
+      <div className="flex flex-col gap-3">
+        <h1 className="text-3xl font-bold text-center">
+          <Text type="main-title">
+            {h1}
+          </Text>
+        </h1>
+        {h2 && (
+          <h2 className="text-center">
+            <Text type="tagline">{h2}</Text>
+          </h2>
+        )}
+      </div>
 
       {children}
 
       <div className="flex flex-col gap-3">
         <Button type="submit" active={true}>
-          {buttonText}
+          <Text className="text-button">
+            {buttonText}
+          </Text>
         </Button>
 
         {link && (
