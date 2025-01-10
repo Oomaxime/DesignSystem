@@ -26,7 +26,10 @@ export default {
       control: { type: "text" },
       description: "Valeur actuelle de l'input.",
     },
-    onChange: { action: "changed", description: "Callback pour les changements de valeur." },
+    onChange: {
+      action: "changed",
+      description: "Callback pour les changements de valeur.",
+    },
   },
 };
 
@@ -54,6 +57,13 @@ TextInput.args = {
   type: "text",
   placeholder: "Entrez votre nom",
   value: "",
+  error: false,
+  errorMessage: "",
+  validate: (value) => ({
+    isValid: value.length > 0,
+    message:
+      value.length > 0 ? "" : "Le nom d'utilisateur ne peut pas être vide.",
+  }),
 };
 
 // Story : Input mot de passe
@@ -64,6 +74,15 @@ PasswordInput.args = {
   type: "password",
   placeholder: "Entrez votre mot de passe",
   value: "",
+  error: false,
+  errorMessage: "",
+  validate: (value) => ({
+    isValid: value.length >= 6,
+    message:
+      value.length >= 6
+        ? ""
+        : "Le mot de passe doit contenir au moins 6 caractères.",
+  }),
 };
 
 // Story : Input avec valeur initiale
@@ -74,4 +93,12 @@ InputWithValue.args = {
   type: "text",
   placeholder: "Entrez votre email",
   value: "example@example.com",
+  error: false,
+  errorMessage: "",
+  validate: (value) => ({
+    isValid: /\S+@\S+\.\S+/.test(value),
+    message: /\S+@\S+\.\S+/.test(value)
+      ? ""
+      : "Veuillez entrer un email valide.",
+  }),
 };
