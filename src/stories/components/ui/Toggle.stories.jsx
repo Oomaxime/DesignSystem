@@ -6,14 +6,15 @@ export default {
   argTypes: {
     isToggled: {
       control: { type: "boolean" },
-      description: "L'état du toggle (activé ou non)",
+      description: "State of the toggle (true or false).",
     },
     onToggle: { action: "toggled" },
   },
 };
 
+const Template = (args) => <Toggle {...args} />;
 
-
-export const Default = {
+export const Default = Template.bind({});
+Default.args = {
   isToggled: false,
 };

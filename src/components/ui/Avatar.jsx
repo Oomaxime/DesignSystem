@@ -12,7 +12,7 @@ export default function Avatar({ pseudo, img, imgWebp }) {
             <source srcSet={imgWebp || imgWebpDefault} type="image/webp" />
             <img
                 src={img || imgDefault}
-                alt="Illustration du formulaire"
+                alt=""
                 className="rounded-full w-[96px] h-[96px] object-cover"
             />
         </picture>

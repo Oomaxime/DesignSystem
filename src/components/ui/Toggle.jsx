@@ -34,7 +34,7 @@ export default function Toggle({ isToggled, onToggle }) {
             <div className="flex items-center justify-center w-6 h-6">
               <img
                 src={sunIcon}
-                alt="Sun Icon"
+                alt="Mode Clair"
                 className={`w-6 h-6 transition-opacity duration-1000 ${
                   isToggled ? "opacity-0" : "opacity-100"
                 }`}
@@ -51,7 +51,7 @@ export default function Toggle({ isToggled, onToggle }) {
             <div className="flex items-center justify-center w-6 h-6">
               <img
                 src={moonIcon}
-                alt="Moon Icon"
+                alt="Mode Sombre"
                 className={`w-4 h-4 transition-opacity ${
                   isToggled ? "opacity-100" : "opacity-0"
                 }`}

@@ -1,11 +1,10 @@
 import { MemoryRouter } from "react-router-dom";
 import Form from "../../../components/ui/Form";
 import Input from "../../../components/ui/Input";
-import ConnexionForm from "../../../components/ui/ConnexionForm";
 
 export default {
-  title: "Components/ui/ConnexionForm",
-  component: ConnexionForm,
+  title: "Components/ui/Form",
+  component: Form,
   decorators: [
     (Story) => (
       <MemoryRouter>
@@ -26,10 +25,6 @@ export default {
       control: { type: "text" },
       description: "Submit button text.",
     },
-    link: {
-      control: { type: "object" },
-      description: "Link displayed below the button, with text and URL.",
-    },
     onSubmit: {
       action: "submitted",
       description: "Callback called when the form is submitted.",
@@ -44,6 +39,13 @@ export default {
 const Template = (args) => (
   <Form {...args}>
     <Input
+      label="Username"
+      id="username"
+      type="text"
+      placeholder="Enter your username"
+      onChange={() => {}}
+    />
+    <Input
       label="Email"
       id="email"
       type="email"
@@ -57,18 +59,21 @@ const Template = (args) => (
       placeholder="********"
       onChange={() => {}}
     />
+    <Input
+      label="Confirm Password"
+      id="confirmPassword"
+      type="password"
+      placeholder="********"
+      onChange={() => {}}
+    />
   </Form>
 );
 
-export const LoginForm = Template.bind({});
-LoginForm.args = {
-  h1: "Welcome Back 👋",
-  h2: "Sign in to access your account",
-  buttonText: "Sign In",
-  link: {
-    text: "Forgot Password?",
-    url: "/forgotpassword",
-    align: "end",
-  },
+// Story : Formulaire de connexion
+export const ProfileForm = Template.bind({});
+ProfileForm.args = {
+  h1: "Edit Profile.",
+  h2: "Change your personal data.",
+  buttonText: "Save",
   path: "/param/user",
 };
