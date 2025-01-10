@@ -1,17 +1,9 @@
-import { MemoryRouter } from "react-router-dom";
 import Form from "../../../components/ui/Form";
 import Input from "../../../components/ui/Input";
 
 export default {
   title: "Components/ui/ConnexionForm",
   component: ConnexionForm,
-  decorators: [
-    (Story) => (
-      <MemoryRouter>
-        <Story />
-      </MemoryRouter>
-    ),
-  ],
   argTypes: {
     h1: {
       control: { type: "text" },
