@@ -123,35 +123,35 @@ body.dark {
         font-weight: var(--main-title-font-weight);
         line-height: var(--main-title-line-height);
     }
-    
+
     /* Tagline */
     .tagline {
         font-size: var(--tagline-font-size);
         font-weight: var(--tagline-font-weight);
         line-height: var(--tagline-line-height);
     }
-    
+
     /* Text Button */
     .text-button {
         font-size: var(--text-button-font-size);
         font-weight: var(--text-button-font-weight);
         line-height: var(--text-button-line-height);
     }
-    
+
     /* Text Accent */
     .text-accent {
         font-size: var(--text-accent-font-size);
         font-weight: var(--text-accent-font-weight);
         line-height: var(--text-accent-line-height);
     }
-    
+
     /* Text Large */
     .text-large {
         font-size: var(--text-large-font-size);
         font-weight: var(--text-large-font-weight);
         line-height: var(--text-large-line-height);
     }
-    
+
     /* Text Regular */
     .text-regular {
         font-size: var(--text-regular-font-size);
@@ -218,6 +218,10 @@ body.dark {
 
     a {
         color: var(--link-color);
+        text-decoration: underline;
+    }
+    a:hover {
+        text-decoration: none;
     }
     .dark a {
         color: var(--dark-link-color);
