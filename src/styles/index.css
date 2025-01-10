@@ -41,9 +41,6 @@
     --input-placeholder-color-active: #0B7BD2;
     --input-border-color-focus: #0B7BD2;
 
-
-
-
     /* Alert */
     /* ================================== */
     --error-color: #E25153;
@@ -64,6 +61,10 @@
     /* ================================== */
     --avatar-border-color: #000;
     --dark-avatar-border-color: #fff;
+
+    /* Link */
+    --link-color: #4164CF;
+    --dark-link-color: #F1F5FD;
 
 
     /* Typo */
@@ -171,6 +172,12 @@ body.dark {
         line-height: 1;
         font-size: 16px;
     }
+    .dark .btn-primary {
+        background-color: var(--dark-cta-primary-bg-default);
+    }
+    .dark .btn-primary:hover {
+        background-color: var(--dark-cta-primary-bg-hover);
+    }
 
     .input {
         width: 100%;
@@ -191,7 +198,12 @@ body.dark {
     }
 
     .form {
-        @apply flex gap-12 flex-col w-[418px] mx-auto;
+        width: 418px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
     }
 
     .avatar {
@@ -203,12 +215,11 @@ body.dark {
         border-color: var(--dark-avatar-border-color);
     }
 
-    /* DarkMode */
-    /* ========================== */
-    .dark .btn-primary {
-        background-color: var(--dark-cta-primary-bg-default);
+    a {
+        color: var(--link-color);
     }
-    .dark .btn-primary:hover {
-        background-color: var(--dark-cta-primary-bg-hover);
+    .dark a {
+        color: var(--dark-link-color);
     }
+
 }

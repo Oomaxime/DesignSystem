@@ -41,7 +41,7 @@ export default function Form({
             {link.pretext}
             <Link
               to={link.url}
-              className="text-blue-500 hover:underline text-end"
+              className="link"
             >
               {link.text}
             </Link>
