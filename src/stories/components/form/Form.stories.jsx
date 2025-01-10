@@ -1,39 +1,26 @@
-import Form from "./Form";
-import { action } from "@storybook/addon-actions";
+import { MemoryRouter } from "react-router-dom";
+import Form from "../../../components/ui/Form";
+import ConnexionForm from "../../../pages/ConnexionForm";
+import ForgotPasswordForm from "../../../pages/ForgotPasswordForm";
+import UserForm from "../../../pages/UserForm";
 
-// Définir les métadonnées de la story
 export default {
-  title: "Components/Form",
+  title: "Components/ui/Form",
   component: Form,
+  decorators: [
+    (Story) => (
+      <MemoryRouter>
+        <Story />
+      </MemoryRouter>
+    ),
+  ],
 };
 
-// Story par défaut
-export const Default = () => (
-  <Form onSubmit={action("form-submitted")}>
-    <input type="text" placeholder="Enter text" />
-  </Form>
-);
+// Story : Formulaire de connexion
+export const ConnexionFormStory = () => <ConnexionForm />;
 
-// Story avec un titre personnalisé
-export const WithCustomTitle = () => (
-  <Form onSubmit={action("form-submitted")} h1="Custom Title" h2="Subtitle">
-    <input type="text" placeholder="Enter text" />
-  </Form>
-);
+// Story : Formulaire de réinitialisation de mot de passe
+export const ForgotPasswordFormStory = () => <ForgotPasswordForm />;
 
-// Story avec un lien
-export const WithLink = () => (
-  <Form
-    onSubmit={action("form-submitted")}
-    link={{ text: "Click here", url: "/some-path", pretext: "Need help? " }}
-  >
-    <input type="text" placeholder="Enter text" />
-  </Form>
-);
-
-// Story avec un chemin de navigation personnalisé
-export const WithCustomPath = () => (
-  <Form onSubmit={action("form-submitted")} path="/custom-path">
-    <input type="text" placeholder="Enter text" />
-  </Form>
-);
+// Story : Formulaire de modification de profil utilisateur
+export const UserFormStory = () => <UserForm />;
