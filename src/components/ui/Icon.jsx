@@ -9,12 +9,12 @@ const sizeClasses = {
 
 const defaultClasses = "inline-flex";
 
-function Icon({ icon: Icon = TfiLayoutWidthDefaultAlt, size = "md", color = "font-default" }) {
+function Icon({ icon: Icon = TfiLayoutWidthDefaultAlt, size = "md", color = "font-default", children }) {
   return (
     <span
       className={`${defaultClasses} ${sizeClasses[size]} text-${color}`}
     >
-      <Icon />
+      {children}
     </span>
   );
 }

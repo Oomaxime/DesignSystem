@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import Text from "./Text";
 import { FaEyeSlash, FaEye } from "react-icons/fa6";
+import Icon from "./Icon";
+import warning from "../../assets/icons/warning.svg";
 
 const defaultClasses = "input text-regular";
 
@@ -12,6 +14,7 @@ export default function Input({
   placeholder = "",
   value = "",
   onChange,
+  error = false,
 }) {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -30,7 +33,7 @@ export default function Input({
       <div className="relative">
         <input
           id={id}
-          className={`${defaultClasses}`}
+          className={`${defaultClasses} ${error ? "border-error" : ""}`}
           type={type === "password" && !showPassword ? "password" : "text"}
           placeholder={placeholder}
           value={value}
@@ -51,6 +54,16 @@ export default function Input({
           </button>
         )}
       </div>
+      {error && (
+      <div className="flex items-center gap-1">
+        <Icon className="text-error" size="sm" color="error">
+          <img src={warning} alt="warning" />
+        </Icon>
+        <Text type="error" className="text-error">
+          error message
+        </Text>
+      </div>
+      )}
     </div>
   );
 }
