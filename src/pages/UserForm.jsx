@@ -1,6 +1,5 @@
 import Form from '../components/ui/Form'
 import Input from '../components/ui/Input'
-import Button from '../components/ui/Button'
 import { useState } from 'react'
 
 export default function UserForm() {
@@ -66,13 +65,6 @@ export default function UserForm() {
             />
           </div>
         </div>
-      </div>
-
-      {/* Ajout du bouton de soumission ici */}
-      <div className="flex flex-col mt-6">
-        <Button type="submit" active={true}>
-          Save
-        </Button>
       </div>
     </Form>
   )

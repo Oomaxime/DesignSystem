@@ -4,6 +4,10 @@
 
 :root {
     --default-font-color: #080808;
+    --default-bg-color: #fff;
+
+    --dark-font-color: #fff;
+    --dark-bg-color: #000;
 
     /* CTA */
     /* ================================== */
@@ -87,6 +91,12 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--default-font-color);
+    background-color: var(--default-bg-color);
+}
+
+body.dark {
+    color: var(--dark-font-color);
+    background-color: var(--dark-bg-color);
 }
 
 @layer base {    

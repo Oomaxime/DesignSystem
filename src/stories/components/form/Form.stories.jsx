@@ -1,9 +1,8 @@
 import React from "react";
-import { MemoryRouter } from "react-router-dom"; // Importation du routeur pour le contexte
+import { MemoryRouter } from "react-router-dom";
 import Form from "../../../components/ui/Form";
 import Input from "../../../components/ui/Input";
 
-// Configuration de la Story pour le composant Form
 export default {
   title: "Components/ui/Form",
   component: Form,
