@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /login
+Disallow: /forgotpassword
+
+Sitemap: https://design-system-five-wheat.vercel.app/sitemap.xml
