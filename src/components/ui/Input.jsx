@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Text from "./Text";
 import { FaEyeSlash, FaEye } from "react-icons/fa6";
 import Icon from "./Icon";
-import warning from "../../assets/icons/warning.svg";
+import { ReactComponent as Logo } from "../../assets/icons/warning.svg";
 
 const defaultClasses = "input text-regular";
 
@@ -69,7 +69,7 @@ export default function Input({
       {localError && (
         <div className="flex items-center gap-1">
           <Icon className="text-error" size="sm" color="error">
-            <img src={warning} alt="warning" />
+            <Logo />
           </Icon>
           <Text type="error" className="text-error">
             {localErrorMessage}

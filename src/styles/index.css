@@ -105,18 +105,19 @@
 }
 
 /* ================================================================= */
-body {
-    font-family: 'Roboto', sans-serif;
-    color: var(--default-font-color);
-    background-color: var(--default-bg-color);
-}
-
-body.dark {
-    color: var(--dark-font-color);
-    background-color: var(--dark-bg-color);
-}
 
 @layer base {
+    body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--default-font-color);
+        background-color: var(--default-bg-color);
+    }
+
+    body.dark {
+        color: var(--dark-font-color);
+        background-color: var(--dark-bg-color);
+    }
+
     /* Main Title */
     .main-title {
         font-size: var(--main-title-font-size);
