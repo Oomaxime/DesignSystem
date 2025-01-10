@@ -33,7 +33,7 @@ export default function Form({
 
       {children}
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 mx-5">
         <Button type="submit" active={true} onClick={() => navigate(path)}>
           <Text className="text-button">{buttonText}</Text>
         </Button>

@@ -55,7 +55,7 @@ export default function UserForm() {
       buttonText="Save"
       path="/param/user"
     >
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 w-screen px-6 md:w-auto mpd:px-0">
         <div className="flex flex-col gap-2">
           <div className="flex flex-col gap-1">
             <Input
