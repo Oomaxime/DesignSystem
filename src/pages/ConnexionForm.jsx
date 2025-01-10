@@ -1,6 +1,7 @@
+import { useState } from "react";
+import { navigate } from "react-router-dom";
 import Form from "../components/ui/Form";
 import Input from "../components/ui/Input";
-import { useState } from "react";
 
 export default function ConnexionForm() {
   const [email, setEmail] = useState("");
@@ -10,12 +11,12 @@ export default function ConnexionForm() {
     <Form
       onSubmit={(e) => {
         e.preventDefault();
-        alert(`Email: ${email}, Password: ${password}`);
+        navigate("/param/user");
       }}
       h1="Welcome Back 👋"
       h2="Sign in to access your account"
       buttonText="Sign In"
-      link={{align: "end", text: "Forgot Password?", url: "/forgotpassword" }}
+      link={{ align: "end", text: "Forgot Password?", url: "/forgotpassword" }}
     >
       <div className="flex flex-col gap-3">
         <Input
