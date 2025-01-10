@@ -173,6 +173,6 @@ body.dark {
     }
 
     .form {
-        @apply flex gap-12 flex-col w-[418px] mx-auto;
+        @apply flex gap-12 flex-col mx-auto mx-4 md:w-[418px] md:mx-0;
     }
 }

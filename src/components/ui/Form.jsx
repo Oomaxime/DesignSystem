@@ -12,7 +12,7 @@ export default function Form({ children, onSubmit, h1 = "Title", h2 = "", button
       className={defaultClasses}
     >
       <div className="flex flex-col gap-3">
-        <h1>
+        <h1 className="text-center">
           <Text type="main-title">
             {h1}
           </Text>
