@@ -17,8 +17,8 @@ export default function MainLayout() {
   };
 
   return (
-    <main className="flex flex-col h-screen py-10 md:flex-row">
-      <aside className="flex flex-col justify-between items-center w-1/10 text-center min-w-52 border-r">
+    <main className="pl-52 flex flex-col h-screen py-10 md:flex-row">
+      <aside className="py-10 fixed top-0 left-0 h-full flex flex-col justify-between items-center w-1/10 text-center min-w-52 border-r">
         <Avatar/>
 
         <div>
