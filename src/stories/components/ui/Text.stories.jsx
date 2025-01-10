@@ -1,74 +1,61 @@
 import Text from "../../../components/ui/Text";
 
+// Définit les métadonnées pour Storybook
 export default {
   title: "Components/Typographie/Text",
   component: Text,
   argTypes: {
     type: {
       control: { type: "select" },
-      options: ["h1", "h2", "h3", "h4", "body", "label"],
+      options: [
+        "main-title",
+        "tagline",
+        "text-button",
+        "text-accent",
+        "text-large",
+        "text-regular",
+      ],
     },
-    weight: {
-      control: { type: "select" },
-      options: ["bold", "regular", "thin"],
-    },
+    children: { control: "text" },
+    className: { control: "text" },
   },
 };
 
+// Template de base
 const Template = (args) => <Text {...args} />;
 
-export const H1 = Template.bind({});
-H1.args = {
-  type: "h1",
-  weight: "regular",
-  children: "This is a H1",
+export const MainTitle = Template.bind({});
+MainTitle.args = {
+  type: "main-title",
+  children: "This is the Main Title",
 };
 
-export const H2 = Template.bind({});
-H2.args = {
-  type: "h2",
-  weight: "regular",
-  children: "This is a H2",
+export const Tagline = Template.bind({});
+Tagline.args = {
+  type: "tagline",
+  children: "This is the Tagline",
 };
 
-export const H3 = Template.bind({});
-H3.args = {
-  type: "h3",
-  weight: "regular",
-  children: "This is a H3",
+export const TextButton = Template.bind({});
+TextButton.args = {
+  type: "text-button",
+  children: "Click Me",
 };
 
-export const H4 = Template.bind({});
-H4.args = {
-  type: "h4",
-  weight: "regular",
-  children: "This is a H4",
+export const TextAccent = Template.bind({});
+TextAccent.args = {
+  type: "text-accent",
+  children: "Important Text",
 };
 
-export const Body = Template.bind({});
-Body.args = {
-  type: "body",
-  weight: "regular",
-  children: "This is a Body",
+export const TextLarge = Template.bind({});
+TextLarge.args = {
+  type: "text-large",
+  children: "Large Text Content",
 };
 
-export const Label = Template.bind({});
-Label.args = {
-  type: "label",
-  weight: "regular",
-  children: "This is a Label",
-};
-
-export const Bold = Template.bind({});
-Bold.args = {
-  type: "h1",
-  weight: "bold",
-  children: "This is a Bold Text",
-};
-
-export const Thin = Template.bind({});
-Thin.args = {
-  type: "h1",
-  weight: "thin",
-  children: "This is a Thin Text",
+export const TextRegular = Template.bind({});
+TextRegular.args = {
+  type: "text-regular",
+  children: "Regular Text Content",
 };

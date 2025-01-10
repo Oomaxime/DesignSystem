@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
-import img from "../assets/images/illustre_auth_form.avif";
-import imgWebp from "../assets/images/illustre_auth_form.webp";
+import img from "../assets/images/bg.avif";
+import imgWebp from "../assets/images/bg.webp";
 
 
 export default function MainLayout() {
