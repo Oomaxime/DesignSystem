@@ -1,6 +1,7 @@
 import { MemoryRouter } from "react-router-dom";
 import Form from "../../../components/ui/Form";
 import Input from "../../../components/ui/Input";
+import ConnexionForm from "../../../components/ui/ConnexionForm";
 
 export default {
   title: "Components/ui/ConnexionForm",
@@ -59,8 +60,8 @@ const Template = (args) => (
   </Form>
 );
 
-export const ConnexionForm = Template.bind({});
-ConnexionForm.args = {
+export const LoginForm = Template.bind({});
+LoginForm.args = {
   h1: "Welcome Back 👋",
   h2: "Sign in to access your account",
   buttonText: "Sign In",
