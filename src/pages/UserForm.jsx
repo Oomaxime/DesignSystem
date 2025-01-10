@@ -55,14 +55,14 @@ export default function UserForm() {
       buttonText="Save"
       path="/param/user"
     >
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 w-screen px-6 md:w-auto mpd:px-0">
         <div className="flex flex-col gap-2">
           <div className="flex flex-col gap-1">
             <Input
               id="username"
               label="Username"
               type="text"
-              placeholder="Enter text here"
+              placeholder="Enter your username"
               value={username}
               onChange={handleInputChange(setUsername, "username")}
             />
@@ -73,7 +73,7 @@ export default function UserForm() {
               id="email"
               label="Email"
               type="email"
-              placeholder="Enter text email"
+              placeholder="Enter your email"
               value={email}
               onChange={handleInputChange(setEmail, "email")}
               validate={touched.email ? validateEmail : undefined}

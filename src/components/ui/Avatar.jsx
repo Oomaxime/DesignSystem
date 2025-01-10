@@ -16,7 +16,7 @@ export default function Avatar({ pseudo, img, imgWebp }) {
                 className="rounded-full w-[96px] h-[96px] object-cover"
             />
         </picture>
-        <p className="py-3">
+        <p className="pt-3 md:py-3">
         <Text type="text-accent" className="font-bold py-2">
             {pseudo || "John Doe"}
         </Text>
