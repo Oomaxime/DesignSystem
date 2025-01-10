@@ -1,18 +1,15 @@
 import { useEffect } from "react";
+import PropTypes from "prop-types";
 import sunIcon from "../../assets/icons/sun.svg";
 import moonIcon from "../../assets/icons/moon.svg";
 
-const Toggle = ({ isToggled, onToggle }) => {
-  const handleToggle = () => {
-    onToggle(!isToggled);
-  };
+export default function Toggle({ isToggled, onToggle }) {
+  // Gestion du clic pour inverser l'état
+  const handleToggle = () => onToggle(!isToggled);
 
+  // Ajouter ou retirer la classe "dark" sur le body
   useEffect(() => {
-    if (isToggled) {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
+    document.body.classList.toggle("dark", isToggled);
   }, [isToggled]);
 
   return (
@@ -44,7 +41,7 @@ const Toggle = ({ isToggled, onToggle }) => {
               />
             </div>
             <div
-              className={`absolute w-6 h-6 rounded-full transition-transform duration-300 transform flex items-center justify-center`}
+              className="absolute w-6 h-6 rounded-full transition-transform duration-300 transform flex items-center justify-center"
               style={{
                 transform: isToggled ? "translateX(0)" : "translateX(24px)",
                 backgroundColor: "var(--toggle-pin-bg)",
@@ -65,6 +62,9 @@ const Toggle = ({ isToggled, onToggle }) => {
       </div>
     </div>
   );
-};
+}
 
-export default Toggle;
+Toggle.propTypes = {
+  isToggled: PropTypes.bool.isRequired,
+  onToggle: PropTypes.func.isRequired,
+};

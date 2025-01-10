@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../../../components/ui/Button";
 
 // Configuration de la Story pour le composant Button
