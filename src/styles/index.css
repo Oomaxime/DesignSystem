@@ -19,7 +19,7 @@
 
     /* Input */
     /* ================================== */
-    --input-text-background: #E1F1FD;
+    --input-text-background: #fff;
 
     --input-border-color: #888;
     --input-border-color-active: #0B7BD2;
@@ -171,6 +171,6 @@ body {
     }
 
     .form {
-        @apply flex gap-8 flex-col w-96;
+        @apply flex gap-12 flex-col max-w-[380px];
     }
 }

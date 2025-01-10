@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Text from "./Text";
 
-const defaultClasses = "input";
+const defaultClasses = "input text-regular";
 
 export default function Input({ label = "", id = "input", type = "text", placeholder = "", value = "", onChange }) {
   return (

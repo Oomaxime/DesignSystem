@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
-import img from "../assets/images/illustre_auth_form.avif";
-import imgWebp from "../assets/images/illustre_auth_form.webp";
+import imgWebp from "../assets/images/bg.webp";
+import img from "../assets/images/bg.avif";
 
 
 export default function MainLayout() {
@@ -10,6 +10,7 @@ export default function MainLayout() {
         <div className="w-24">
           <picture>
             <source srcSet={img} type="image/avif" />
+            <source srcSet={imgWebp} type="image/webp" />
             <img
               src={img}
               alt="Illustration du formulaire"
