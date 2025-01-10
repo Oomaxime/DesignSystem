@@ -1,16 +1,23 @@
 import PropTypes from "prop-types";
 import Text from "./Text";
 import Button from "./Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const defaultClasses = "form";
 
-export default function Form({ children, onSubmit, h1 = "Title", h2 = "", buttonText = "Submit", link = null }) {
+export default function Form({
+  children,
+  onSubmit,
+  h1 = "Title",
+  h2 = "",
+  buttonText = "Submit",
+  link = null,
+  path = "/",
+}) {
+  const navigate = useNavigate();
+
   return (
-    <form
-      onSubmit={onSubmit}
-      className={defaultClasses}
-    >
+    <form onSubmit={onSubmit} className={defaultClasses}>
       <div className="flex flex-col gap-3">
         <h1 className="text-center">
           <Text type="main-title">
@@ -27,16 +34,17 @@ export default function Form({ children, onSubmit, h1 = "Title", h2 = "", button
       {children}
 
       <div className="flex flex-col gap-3">
-        <Button type="submit" active={true}>
-          <Text className="text-button">
-            {buttonText}
-          </Text>
+        <Button type="submit" active={true} onClick={() => navigate(path)}>
+          <Text className="text-button">{buttonText}</Text>
         </Button>
 
         {link && (
           <p className={`text-${link.align || "end"}`}>
             {link.pretext}
-            <Link to={link.url} className="text-blue-500 hover:underline text-end">
+            <Link
+              to={link.url}
+              className="text-blue-500 hover:underline text-end"
+            >
               {link.text}
             </Link>
           </p>
@@ -56,4 +64,5 @@ Form.propTypes = {
     text: PropTypes.string,
     url: PropTypes.string,
   }),
+  path: PropTypes.string,
 };

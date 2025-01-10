@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { navigate } from "react-router-dom";
 import Form from "../components/ui/Form";
 import Input from "../components/ui/Input";
 
@@ -9,14 +8,11 @@ export default function ConnexionForm() {
 
   return (
     <Form
-      onSubmit={(e) => {
-        e.preventDefault();
-        navigate("/param/user");
-      }}
       h1="Welcome Back 👋"
       h2="Sign in to access your account"
       buttonText="Sign In"
       link={{ align: "end", text: "Forgot Password?", url: "/forgotpassword" }}
+      path="/param/user"
     >
       <div className="flex flex-col gap-3">
         <Input

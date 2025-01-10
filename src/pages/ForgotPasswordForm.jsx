@@ -4,16 +4,34 @@ import { useState } from "react";
 
 export default function ForgotPasswordForm() {
   const [email, setEmail] = useState("");
+  const [touched, setTouched] = useState(false);
+
+  const validateEmail = (value) => {
+    const isValid = /\S+@\S+\.\S+/.test(value);
+    return {
+      isValid,
+      message: isValid ? "" : "Invalid email format",
+    };
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    if (!touched) {
+      setTouched(true);
+    }
+  };
 
   return (
     <Form
-      onSubmit={(e) => {
-        e.preventDefault();
-        alert(`Recovery email sent to: ${email}`);
-      }}
       h1="Reset Password"
       buttonText="Send a recovery code"
-      link={{ pretext: "You have a account? ", align: "center", text: "Sign In", url: "/" }}
+      link={{
+        pretext: "You have a account? ",
+        align: "center",
+        text: "Sign In",
+        url: "/",
+      }}
+      path="/"
     >
       <div className="flex flex-col gap-3">
         <Input
@@ -22,7 +40,8 @@ export default function ForgotPasswordForm() {
           type="email"
           placeholder="Enter your email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={handleEmailChange}
+          validate={touched ? validateEmail : undefined}
         />
       </div>
     </Form>
