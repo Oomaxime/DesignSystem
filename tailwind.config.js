@@ -5,7 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     "./.storybook/**/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: "class", // Activer le mode sombre basé sur une classe
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
