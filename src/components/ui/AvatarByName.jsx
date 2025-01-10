@@ -3,7 +3,6 @@ import React from "react";
 const Avatar = ({ name }) => {
   // Fonction pour extraire les initiales
   const getInitials = (fullName) => {
-    if (!fullName) return "??";
     const names = fullName.trim().split(" ");
     const initials = names.map((n) => n[0]?.toUpperCase()).join("");
     return initials.slice(0, 2); // Limiter à deux lettres
