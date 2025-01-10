@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 import TestAvatar from "./AvatarByName";
 
 export default function Avatar({ pseudo, img, imgWebp }) {
-    if (img) {
         return (
             <div className="w-full flex flex-col items-center">
                 <picture className="avatar">
@@ -28,12 +27,7 @@ export default function Avatar({ pseudo, img, imgWebp }) {
                 </Link>
             </div>
         )
-        } else {
-            return(
-                <TestAvatar name={pseudo} />
-            )
-        }
-    }         
+        }        
 
 Avatar.propTypes = {
     pseudo: PropTypes.string,
