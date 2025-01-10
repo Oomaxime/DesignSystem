@@ -217,13 +217,6 @@ body.dark {
         border-color: var(--dark-avatar-border-color);
     }
 
-    a {
-        color: var(--link-color);
-        text-decoration: underline;
-    }
-    a:hover {
-        text-decoration: none;
-    }
     .dark a {
         color: var(--dark-link-color);
     }
