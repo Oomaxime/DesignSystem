@@ -1,14 +1,11 @@
 import { Outlet, Link } from "react-router-dom";
-import imgWebp from "../assets/images/bg.webp";
-import img from "../assets/images/bg.avif";
 import { useState } from "react";
 import Toggle from "../components/ui/Toggle";
-import Text from "../components/ui/Text";
 import Avatar from "../components/ui/Avatar";
 import Back from "../assets/icons/arrow_back.svg";
 
 export default function MainLayout() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [ isDarkMode, setIsDarkMode] = useState(false);
 
   const handleToggleChange = (newState) => {
     setIsDarkMode(newState);
@@ -21,8 +18,8 @@ export default function MainLayout() {
 
   return (
     <main className="flex flex-col h-screen py-10 md:flex-row">
-      <aside className="flex flex-col justify-between items-center w-1/10 text-center min-w-52">
-        <Avatar/> 
+      <aside className="flex flex-col justify-between items-center w-1/10 text-center min-w-52 border-r">
+        <Avatar/>
         <div>
           <Link to="/privacy-policy" className="underline hidden md:block">
             Privacy Policy
@@ -32,8 +29,6 @@ export default function MainLayout() {
           </Link>
         </div>
       </aside>
-
-      <div className="w-px bg-black"></div>
 
       <div className="w-screen flex flex-col gap-20 items-center">
         <div className="absolute top-4 flex justify-between w-full px-6 md:px-8 md:relative">
