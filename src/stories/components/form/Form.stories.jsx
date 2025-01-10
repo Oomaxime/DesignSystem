@@ -1,11 +1,10 @@
 import { MemoryRouter } from "react-router-dom";
 import Form from "../../../components/ui/Form";
 import Input from "../../../components/ui/Input";
-import ConnexionForm from "../../../components/ui/ConnexionForm";
 
 export default {
-  title: "Components/ui/ConnexionForm",
-  component: ConnexionForm,
+  title: "Components/ui/Form",
+  component: Form,
   decorators: [
     (Story) => (
       <MemoryRouter>
@@ -16,27 +15,27 @@ export default {
   argTypes: {
     h1: {
       control: { type: "text" },
-      description: "The main title (H1) of the form.",
+      description: "Le titre principal (H1) du formulaire.",
     },
     h2: {
       control: { type: "text" },
-      description: "The subtitle (H2) of the form.",
+      description: "Le sous-titre (H2) du formulaire.",
     },
     buttonText: {
       control: { type: "text" },
-      description: "Submit button text.",
+      description: "Texte du bouton de soumission.",
     },
     link: {
       control: { type: "object" },
-      description: "Link displayed below the button, with text and URL.",
+      description: "Lien affiché sous le bouton, avec un texte et une URL.",
     },
     onSubmit: {
       action: "submitted",
-      description: "Callback called when the form is submitted.",
+      description: "Callback appelé lors de la soumission du formulaire.",
     },
     path: {
       control: { type: "text" },
-      description: "Path to destination page after submission.",
+      description: "Chemin vers la page de destination après la soumission.",
     },
   },
 };
@@ -60,8 +59,9 @@ const Template = (args) => (
   </Form>
 );
 
-export const LoginForm = Template.bind({});
-LoginForm.args = {
+// Story : Formulaire de connexion
+export const ConnexionForm = Template.bind({});
+ConnexionForm.args = {
   h1: "Welcome Back 👋",
   h2: "Sign in to access your account",
   buttonText: "Sign In",
@@ -70,5 +70,4 @@ LoginForm.args = {
     url: "/forgotpassword",
     align: "end",
   },
-  path: "/param/user",
 };
