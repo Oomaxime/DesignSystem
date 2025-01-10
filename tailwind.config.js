@@ -5,7 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     "./.storybook/**/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: "class",
+  darkMode: "class", // Activer le mode sombre basé sur une classe
   theme: {
     extend: {
       colors: {
@@ -21,12 +21,18 @@ export default {
         "cta-primary-inactive": "var(--cta-primary-bg-inactive)",
         "cta-primary-font": "var(--cta-primary-font-color)",
 
+        "dark-cta-primary-default": "var(--dark-cta-primary-bg-default)",
+        "dark-cta-primary-hover": "var(--dark-cta-primary-bg-hover)",
+        "dark-cta-primary-inactive": "var(--dark-cta-primary-bg-inactive)",
+
         // Input
         "input-bg": "var(--input-text-background)",
+        "dark-input-bg": "var(--dark-input-text-background)",
         "input-border": "var(--input-border-color)",
         "input-border-active": "var(--input-border-color-active)",
         "input-placeholder-default": "var(--input-placeholder-color-default)",
         "input-placeholder-active": "var(--input-placeholder-color-active)",
+        "input-border-focus": "var(--input-border-color-focus)",
 
         // Alert
         "error": "var(--error-color)",
@@ -39,6 +45,15 @@ export default {
         // Toggle
         "toggle-bg": "var(--toggle-bg)",
         "toggle-pin-bg": "var(--toggle-pin-bg)",
+        "toggle-shadow": "var(--toggle-shadow)",
+
+        // Avatar
+        "avatar-border": "var(--avatar-border-color)",
+        "dark-avatar-border": "var(--dark-avatar-border-color)",
+
+        // Link
+        "link-default": "var(--link-color)",
+        "dark-link-default": "var(--dark-link-color)",
       },
       borderRadius: {
         // CTA primary
