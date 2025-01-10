@@ -43,14 +43,16 @@ export default function ConnexionForm() {
         />
       </div>
 
-      <Button type="submit" active={true}>
-        Submit
-      </Button>
-      <p className="text-end">
-        <Link to="/forgotpassword" className="text-blue-500 hover:underline">
-          Forgot Password?
-        </Link>
-      </p>
+      <div className="flex flex-col gap-3">
+        <Button type="submit" active={true}>
+          Submit
+        </Button>
+        <p className="text-end">
+          <Link to="/forgotpassword" className="text-blue-500 hover:underline">
+            Forgot Password?
+          </Link>
+        </p>
+      </div>
     </Form>
   );
 }

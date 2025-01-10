@@ -12,8 +12,8 @@ const Toggle = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="flex items-center space-x-8">
-        <label className="relative inline-flex" htmlFor="theme-toggle">
+      <div className="flex items-center space-x-8 cursor-pointer">
+        <label className="relative inline-flex cursor-pointer" htmlFor="theme-toggle">
           <input
             id="theme-toggle"
             type="checkbox"

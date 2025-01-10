@@ -29,7 +29,7 @@ export default function ForgotPasswordForm() {
         />
       </div>
 
-      <div className="">
+      <div className="flex flex-col gap-3">
         <Button type="submit" active={true}>
           Send a recovery code
         </Button>

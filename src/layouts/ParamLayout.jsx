@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 import imgWebp from "../assets/images/bg.webp";
 import img from "../assets/images/bg.avif";
-
+import Toggle from "../components/ui/Toggle";
 
 export default function MainLayout() {
   return (
