@@ -2,6 +2,7 @@ import Text from './Text';
 import imgDefault from "../../assets/images/bg.avif";
 import imgWebpDefault from "../../assets/images/bg.webp";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function Avatar({ pseudo, img, imgWebp }) {
   return (
@@ -26,3 +27,9 @@ export default function Avatar({ pseudo, img, imgWebp }) {
     </div>
   )
 }
+
+Avatar.propTypes = {
+    pseudo: PropTypes.string,
+    img: PropTypes.string,
+    imgWebp: PropTypes.string,
+};

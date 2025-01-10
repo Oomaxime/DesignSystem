@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Toggle from "../../../components/ui/Toggle";
 
 export default {
