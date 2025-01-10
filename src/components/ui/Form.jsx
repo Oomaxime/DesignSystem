@@ -20,9 +20,7 @@ export default function Form({
     <form onSubmit={onSubmit} className={defaultClasses}>
       <div className="flex flex-col gap-3">
         <h1 className="text-center">
-          <Text type="main-title">
-            {h1}
-          </Text>
+          <Text type="main-title">{h1}</Text>
         </h1>
         {h2 && (
           <h2 className="text-center">
@@ -43,7 +41,7 @@ export default function Form({
             {link.pretext}
             <Link
               to={link.url}
-              className="text-blue-500 hover:underline text-end"
+              className="link text-end"
             >
               {link.text}
             </Link>

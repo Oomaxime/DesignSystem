@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Avatar({ pseudo, img, imgWebp }) {
   return (
     <div className="w-full flex flex-col items-center">
-        <picture className="border-4 border-primary rounded-full">
+        <picture className="avatar">
             <source srcSet={img || imgDefault} type="image/avif" />
             <source srcSet={imgWebp || imgWebpDefault} type="image/webp" />
             <img

@@ -44,7 +44,7 @@ export default function Toggle({ isToggled, onToggle }) {
               className="absolute w-6 h-6 rounded-full transition-transform duration-300 transform flex items-center justify-center"
               style={{
                 transform: isToggled ? "translateX(0)" : "translateX(24px)",
-                backgroundColor: "var(--toggle-pin-bg)",
+                backgroundColor: isToggled ? "var(--toggle-pin-bg)" : "var(--toggle-bg)",
                 boxShadow: "var(--toggle-shadow)",
               }}
             ></div>
