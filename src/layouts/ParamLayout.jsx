@@ -19,7 +19,7 @@ export default function MainLayout() {
   return (
     <main className="flex flex-col h-screen py-10 md:flex-row">
       <aside className="flex flex-col justify-between items-center w-1/10 text-center min-w-52 border-r">
-        <Avatar/>
+        <Avatar pseudo='John Doe'/>
         <div>
           <Link to="/privacy-policy" className="underline hidden md:block">
             Privacy Policy
