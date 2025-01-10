@@ -19,7 +19,7 @@ export default function Form({
   return (
     <form onSubmit={onSubmit} className={defaultClasses}>
       <div className="flex flex-col gap-3">
-        <h1>
+        <h1 className="text-center">
           <Text type="main-title">{h1}</Text>
         </h1>
         {h2 && (
