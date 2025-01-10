@@ -54,8 +54,10 @@
 
     /* Toggle */
     /* ================================== */
-    --toggle-bg: #83CFF6;
-    --toggle-pin-bg: #0B2D46;
+    --toggle-bg: #20274c;
+    --toggle-pin-bg: #a2c1ee;
+    --dark-toggle-bg: #a2c1ee;
+    --dark-toggle-pin-bg: #20274c;
     --toggle-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
     /* Avatar */
