@@ -210,6 +210,14 @@ body.dark {
 
     .link {
         color: var(--link-color);
+        text-transform: underline;
+    }
+    .link:hover {
+        text-decoration: none;
+    }
+
+    .dark .link {
+        color: var(--dark-link-color);
     }
 
     .avatar {
