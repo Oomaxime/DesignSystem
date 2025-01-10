@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Text from "./Text";
 import { FaEyeSlash, FaEye } from "react-icons/fa6";
 import Icon from "./Icon";
@@ -15,12 +15,24 @@ export default function Input({
   value = "",
   onChange,
   error = false,
+  errorMessage = "",
+  validate,
 }) {
   const [showPassword, setShowPassword] = useState(false);
+  const [localError, setLocalError] = useState(error);
+  const [localErrorMessage, setLocalErrorMessage] = useState(errorMessage);
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    if (validate) {
+      const { isValid, message } = validate(value);
+      setLocalError(!isValid);
+      setLocalErrorMessage(message);
+    }
+  }, [value, validate]);
 
   return (
     <div className="flex flex-col gap-2">
@@ -33,7 +45,7 @@ export default function Input({
       <div className="relative">
         <input
           id={id}
-          className={`${defaultClasses} ${error ? "border-error" : ""}`}
+          className={`${defaultClasses} ${localError ? "border-error" : ""}`}
           type={type === "password" && !showPassword ? "password" : "text"}
           placeholder={placeholder}
           value={value}
@@ -54,15 +66,15 @@ export default function Input({
           </button>
         )}
       </div>
-      {error && (
-      <div className="flex items-center gap-1">
-        <Icon className="text-error" size="sm" color="error">
-          <img src={warning} alt="warning" />
-        </Icon>
-        <Text type="error" className="text-error">
-          error message
-        </Text>
-      </div>
+      {localError && (
+        <div className="flex items-center gap-1">
+          <Icon className="text-error" size="sm" color="error">
+            <img src={warning} alt="warning" />
+          </Icon>
+          <Text type="error" className="text-error">
+            {localErrorMessage}
+          </Text>
+        </div>
       )}
     </div>
   );
@@ -75,4 +87,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  error: PropTypes.bool,
+  errorMessage: PropTypes.string,
+  validate: PropTypes.func,
 };

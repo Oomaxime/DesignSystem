@@ -4,6 +4,22 @@ import { useState } from "react";
 
 export default function ForgotPasswordForm() {
   const [email, setEmail] = useState("");
+  const [touched, setTouched] = useState(false);
+
+  const validateEmail = (value) => {
+    const isValid = /\S+@\S+\.\S+/.test(value);
+    return {
+      isValid,
+      message: isValid ? "" : "Invalid email format",
+    };
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    if (!touched) {
+      setTouched(true);
+    }
+  };
 
   return (
     <Form
@@ -24,7 +40,8 @@ export default function ForgotPasswordForm() {
           type="email"
           placeholder="Enter your email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={handleEmailChange}
+          validate={touched ? validateEmail : undefined}
         />
       </div>
     </Form>
