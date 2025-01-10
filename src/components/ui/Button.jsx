@@ -18,6 +18,6 @@ export default function Button({ children, onClick, active }) {
 
 Button.propTypes = {
   active: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   children: PropTypes.node.isRequired,
 };
