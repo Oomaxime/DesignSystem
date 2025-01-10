@@ -5,6 +5,7 @@ import { useState } from "react";
 import Toggle from "../components/ui/Toggle";
 import Text from "../components/ui/Text";
 import Avatar from "../components/ui/Avatar";
+import Back from "../assets/icons/arrow_back.svg";
 
 export default function MainLayout() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -38,7 +39,7 @@ export default function MainLayout() {
         <div className="absolute top-4 flex justify-between w-full px-6 md:px-8 md:relative">
           <Link to=".." className="underline">
             <span className="hidden md:block">Back</span>
-            <span className="block md:hidden">SVG</span>
+            <span className="block md:hidden"><img src={Back} className='w-8 h-8 transition-opacity'/></span>
           </Link>
           <Toggle isToggled={isDarkMode} onToggle={handleToggleChange} />
         </div>
