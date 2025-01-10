@@ -1,50 +1,93 @@
+import React from "react";
+import { MemoryRouter } from "react-router-dom"; // Importation du routeur pour le contexte
 import Form from "../../../components/ui/Form";
 import Input from "../../../components/ui/Input";
 
+// Configuration de la Story pour le composant Form
 export default {
-  title: "Components/Form/Form",
+  title: "Components/ui/Form",
   component: Form,
+  decorators: [
+    (Story) => (
+      <MemoryRouter>
+        <Story />
+      </MemoryRouter>
+    ),
+  ],
   argTypes: {
-    h1: { control: "text", description: "Main title for the form" },
-    h2: { control: "text", description: "Subtitle or tagline for the form" },
-    buttonText: { control: "text", description: "Text for the submit button" },
-    link: {
-      control: "object",
-      description: "Optional link with text and URL",
+    h1: {
+      control: { type: "text" },
+      description: "Le titre principal (H1) du formulaire.",
     },
-    onSubmit: { action: "submitted", description: "Callback on form submission" },
+    h2: {
+      control: { type: "text" },
+      description: "Le sous-titre (H2) du formulaire.",
+    },
+    buttonText: {
+      control: { type: "text" },
+      description: "Texte du bouton de soumission.",
+    },
+    link: {
+      control: { type: "object" },
+      description: "Lien affiché sous le bouton, avec un texte et une URL.",
+    },
+    onSubmit: { action: "submitted", description: "Callback appelé lors de la soumission du formulaire." },
   },
 };
 
+// Template de base pour les Stories
 const Template = (args) => (
   <Form {...args}>
-    <div className="flex flex-col gap-3">
-      <Input id="email" label="Email" type="email" placeholder="Enter your email" />
-      <Input id="password" label="Password" type="password" placeholder="Enter your password" />
-    </div>
+    <Input
+      label="Nom d'utilisateur"
+      id="username"
+      type="text"
+      placeholder="Entrez votre nom d'utilisateur"
+      onChange={() => {}}
+    />
+    <Input
+      label="Mot de passe"
+      id="password"
+      type="password"
+      placeholder="Entrez votre mot de passe"
+      onChange={() => {}}
+    />
   </Form>
 );
 
-export const Default = Template.bind({});
-Default.args = {
-  h1: "Welcome Back 👋",
-  h2: "Let’s make big things together!",
-  buttonText: "Sign in",
-  link: { text: "Forgot Password?", url: "/forgotpassword" },
+// Story : Formulaire de connexion
+export const LoginForm = Template.bind({});
+LoginForm.args = {
+  h1: "Connexion",
+  h2: "Veuillez entrer vos identifiants",
+  buttonText: "Se connecter",
+  link: {
+    text: "Créer un compte",
+    url: "/register",
+    pretext: "Pas encore inscrit ? ",
+    align: "start",
+  },
 };
 
-export const NoSubtitle = Template.bind({});
-NoSubtitle.args = {
-  h1: "Reset password.",
-  h2: "",
-  buttonText: "Send a recovery code",
-  link: { text: "You have a account?", url: "/signin" },
+// Story : Formulaire d'inscription
+export const RegisterForm = Template.bind({});
+RegisterForm.args = {
+  h1: "Inscription",
+  h2: "Créez un nouveau compte",
+  buttonText: "S'inscrire",
+  link: {
+    text: "Se connecter",
+    url: "/login",
+    pretext: "Déjà inscrit ? ",
+    align: "end",
+  },
 };
 
-export const WithoutLink = Template.bind({});
-WithoutLink.args = {
-  h1: "Reset Password",
-  h2: "Enter your email to receive a recovery code",
-  buttonText: "Send Recovery Code",
+// Story : Formulaire sans lien
+export const FormWithoutLink = Template.bind({});
+FormWithoutLink.args = {
+  h1: "Formulaire simple",
+  h2: "Sous-titre facultatif",
+  buttonText: "Envoyer",
   link: null,
 };
