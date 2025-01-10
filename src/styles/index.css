@@ -171,6 +171,6 @@ body {
     }
 
     .form {
-        @apply flex gap-12 flex-col max-w-[380px];
+        @apply flex gap-12 flex-col w-[380px];
     }
 }
