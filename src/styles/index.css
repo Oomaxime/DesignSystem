@@ -204,7 +204,6 @@ body.dark {
         display: flex;
         flex-direction: column;
         gap: 48px;
-
     }
 
     .avatar {
@@ -226,5 +225,4 @@ body.dark {
     .dark a {
         color: var(--dark-link-color);
     }
-
 }
