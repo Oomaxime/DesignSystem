@@ -7,6 +7,13 @@ import UserForm from "../../../pages/UserForm";
 export default {
   title: "Components/ui/Form",
   component: Form,
+  argTypes: {
+    h1: { control: "text" },
+    h2: { control: "text" },
+    buttonText: { control: "text" },
+    link: { control: "object" },
+    path: { control: "text" },
+  },
   decorators: [
     (Story) => (
       <MemoryRouter>
