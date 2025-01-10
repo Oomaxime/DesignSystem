@@ -15,17 +15,15 @@ export default function ConnexionForm() {
         alert(`Name: ${name}, Password: ${password}`);
       }}
     >
-      <h1 className="text-3xl font-bold text-center">Welcome Back!</h1>
-      <h2 className="text-center">
-        Today is a new day. It&apos;s your day. You shape it.
-        <br />
+      <h1 className="text-3xl font-bold text-center">Welcome Back !</h1>
+      <h2 calssName="text-center">
+        Today is a new day. It&apos;s your day. You shape it.<br />
         Sign in to start managing your projects.
       </h2>
 
       <div className="flex flex-col gap-3">
+        <label>Email</label>
         <Input
-          id="email"
-          label="Email"
           type="text"
           placeholder="Name"
           value={name}
@@ -33,9 +31,8 @@ export default function ConnexionForm() {
         />
       </div>
       <div className="flex flex-col gap-3">
+        <label>Password</label>
         <Input
-          id="password"
-          label="Password"
           type="password"
           placeholder="Password"
           value={password}
@@ -43,8 +40,8 @@ export default function ConnexionForm() {
         />
       </div>
       <p className="text-end">
-        <Link to="/forgotpassword" className="text-blue-500 hover:underline">
-          Forgot Password?
+        <Link to={"forgotpassword"} className="text-blue-500 hover:underline">
+          Forgot Password ?
         </Link>
       </p>
       <Button onClick={() => {}} active={true}>

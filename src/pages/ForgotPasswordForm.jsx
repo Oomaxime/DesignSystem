@@ -14,23 +14,29 @@ export default function ForgotPasswordForm() {
         alert(`Name: ${name}`)
       }}
     >
-      <h1 className="text-3xl font-bold text-center">Can&apos;t remember your password?</h1>
-      <label htmlFor="">Email</label>
-      <Input
-        type="text"
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <Button onClick={() => {}} active={true}>
-        Submit
-      </Button>
-      <p className="text-center">
-        Do you have an Account?{' '}
-        <Link to={"login"} className="text-blue-500 hover:underline">
-          Login
-        </Link>
-      </p>
+      <h1 className="text-5xl font-bold text-center">Reset password</h1>
+      <div className='flex flex-col gap-1'>
+        <div>
+          <label htmlFor="">Email</label>
+          <Input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div className='pt-10'>
+          <Button onClick={() => {}} active={true}>
+            Send a recovery code
+          </Button>
+          <p className="text-center mt-2">
+            You have an Account?{' '}
+            <Link to={"../"} className="text-blue-500 underline">
+              Sign in.
+            </Link>
+          </p>
+        </div>
+      </div>
     </Form>
   )
 }

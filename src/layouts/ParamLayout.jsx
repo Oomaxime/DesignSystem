@@ -1,38 +1,39 @@
 import { Outlet } from "react-router-dom"
-import img from "../assets/images/bg.avif";
-import imgWebp from "../assets/images/bg.webp";
+import img from "../assets/images/illustre_auth_form.avif";
+import imgWebp from "../assets/images/illustre_auth_form.webp";
 
 
 export default function MainLayout() {
   return (
-    <main className="flex h-screen">
-      <aside className="flex flex-col justify-between items-center w-1/5 text-center p-5 w-min-content">
-        <div className="w-24 mt-6">
+    <main className="flex h-screen py-10">
+      <aside className="flex flex-col justify-between items-center w-1/10 text-center min-w-52">
+        <div className="w-24">
           <picture>
-            <source srcSet={imgWebp} type="image/webp" />
             <source srcSet={img} type="image/avif" />
             <img
               src={img}
               alt="Illustration du formulaire"
-              className="rounded-full"
+              className="rounded-full w-[96px] h-[96px] object-cover"
             />
           </picture>
-          <p className="font-bold h-4">John Doe</p>
+          <p className="font-bold py-2">John Doe</p>
           <a href ="" className="underline">Logout</a>
+        </div>
+        <div>
+          <p className="underline">Privacy Policy <br/> Terms & Conditions</p>
         </div>
       </aside>
 
-      <div className="w-1 bg-black my-10 "></div>
-      
-      <div className="mt-10">
-        <a href="user" className="ml-2 underline">Back</a>
-      </div>
-      <div className="w-full flex justify-center items-center">
+      <div className="w-px bg-black"></div>
+
+      <div className="w-screen flex flex-col gap-20 items-center">
+        <div className="flex justify-between w-full px-8">
+          <a href="../" className="underline">Back</a>
+          <Toggle/>
+        </div>
         <Outlet/>
       </div>
-      <div>
-        <button className="my-10 mr-10">bonsoir</button>
-      </div>
+
     </main>
   )
 }
