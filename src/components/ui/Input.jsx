@@ -31,8 +31,11 @@ export default function Input({
       const { isValid, message } = validate(value);
       setLocalError(!isValid);
       setLocalErrorMessage(message);
+    } else {
+      setLocalError(error);
+      setLocalErrorMessage(errorMessage);
     }
-  }, [value, validate]);
+  }, [value, validate, error, errorMessage]);
 
   return (
     <div className="flex flex-col gap-2">
@@ -45,7 +48,9 @@ export default function Input({
       <div className="relative">
         <input
           id={id}
-          className={`${defaultClasses} ${localError ? "border-[2px] border-error" : ""}`}
+          className={`${defaultClasses} ${
+            localError ? "border-[2px] border-error" : ""
+          }`}
           type={type === "password" && !showPassword ? "password" : "text"}
           placeholder={placeholder}
           value={value}
