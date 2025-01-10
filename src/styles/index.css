@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+    /* Default */
     --default-font-color: #080808;
     --default-bg-color: #fff;
 
