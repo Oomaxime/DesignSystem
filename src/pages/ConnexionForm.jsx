@@ -15,7 +15,7 @@ export default function ConnexionForm() {
       h1="Welcome Back 👋"
       h2="Sign in to access your account"
       buttonText="Sign In"
-      link={{ text: "Forgot Password?", url: "/forgotpassword" }}
+      link={{align: "end", text: "Forgot Password?", url: "/forgotpassword" }}
     >
       <div className="flex flex-col gap-3">
         <Input

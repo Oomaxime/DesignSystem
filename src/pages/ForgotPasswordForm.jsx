@@ -13,7 +13,7 @@ export default function ForgotPasswordForm() {
       }}
       h1="Reset Password"
       buttonText="Send a recovery code"
-      link={{ text: "Sign In", url: "/" }}
+      link={{ pretext: "You have a account? ", align: "center", text: "Sign In", url: "/" }}
     >
       <div className="flex flex-col gap-3">
         <Input
