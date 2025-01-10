@@ -47,7 +47,7 @@ export default function UserForm() {
           <div className="flex flex-col gap-1">
             <Input
               id="password1"
-              label="Confirm Password"
+              label="Password"
               type="password"
               placeholder="Enter your password"
               value={password}
@@ -57,10 +57,10 @@ export default function UserForm() {
 
           <div className="flex flex-col gap-1">
             <Input
-              id="password1"
+              id="rpassword"
               label="Confirm Password"
               type="password"
-              placeholder="Enter your password"
+              placeholder="Confirm your password"
               value={rpassword}
               onChange={(e) => setRpassword(e.target.value)}
             />
@@ -68,6 +68,12 @@ export default function UserForm() {
         </div>
       </div>
 
+      {/* Ajout du bouton de soumission ici */}
+      <div className="flex flex-col mt-6">
+        <Button type="submit" active={true}>
+          Save
+        </Button>
+      </div>
     </Form>
   )
 }

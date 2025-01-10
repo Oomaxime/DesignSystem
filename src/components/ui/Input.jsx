@@ -37,7 +37,8 @@ export default function Input({
           onChange={onChange}
         />
 
-        {type === "password" && (
+        {/* Afficher l'icône de l'œil uniquement si le champ n'est pas vide */}
+        {type === "password" && value && (
           <button
             type="button"
             className="absolute right-3 top-1/2 transform -translate-y-1/2"
