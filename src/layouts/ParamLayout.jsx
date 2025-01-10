@@ -21,10 +21,10 @@ export default function MainLayout() {
       <aside className="flex flex-col justify-between items-center w-1/10 text-center min-w-52 border-r">
         <Avatar/>
         <div>
-          <Link to="/privacy-policy" className="underline hidden md:block">
+          <Link to="/privacy-policy" className="text-black underline hidden md:block">
             Privacy Policy
           </Link>
-          <Link to="/terms-conditions" className="underline hidden md:block">
+          <Link to="/terms-conditions" className="text-black underline hidden md:block">
             Terms & Conditions
           </Link>
         </div>
