@@ -1,35 +1,33 @@
+import React from "react";
 import Button from "../../../components/ui/Button";
 
+// Configuration de la Story pour le composant Button
 export default {
   title: "Components/ui/Button",
   component: Button,
   argTypes: {
-    children: {
-      control: {
-        type: "text",
-      },
-    },
     active: {
-      control: {
-        type: "boolean",
-      },
+      control: { type: "boolean" },
+      description: "Détermine si le bouton est actif ou non.",
     },
-    onClick: {
-      action: "clicked",
+    children: {
+      control: { type: "text" },
+      description: "Le contenu affiché à l'intérieur du bouton.",
     },
+    onClick: { action: "clicked", description: "Callback lors d'un clic." },
   },
 };
 
-const Template = (args) => <Button {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  children: "Default Button",
+// Story pour le bouton actif
+export const Active = (args) => <Button {...args} />;
+Active.args = {
   active: true,
+  children: "Bouton Actif",
 };
 
-export const Inactive = Template.bind({});
+// Story pour le bouton inactif
+export const Inactive = (args) => <Button {...args} />;
 Inactive.args = {
-  children: "Inactive Button",
   active: false,
+  children: "Bouton Inactif",
 };
