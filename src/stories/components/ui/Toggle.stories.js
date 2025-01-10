@@ -1,7 +1,8 @@
-import Toggle from "../../../components/ui/Toggle";
+import React, { useState } from "react";
+import Toggle from "../../../components/ui/Toggle"; // Ajuste le chemin si nécessaire
 
 export default {
-  title: "Components/ui/Toggle",
+  title: "Components/ui/Toggle", // Titre dans la barre latérale de Storybook
   component: Toggle,
   argTypes: {
     isToggled: {
@@ -12,9 +13,17 @@ export default {
   },
 };
 
-const Template = (args) => <Toggle {...args} />;
+const Template = (args) => {
+  const [isToggled, setIsToggled] = useState(false);
+
+  const handleToggle = (newState) => {
+    setIsToggled(newState); // Met à jour l'état du toggle
+  };
+
+  return <Toggle {...args} isToggled={isToggled} onToggle={handleToggle} />;
+};
 
 export const Default = Template.bind({});
 Default.args = {
-  isToggled: false,
+  isToggled: false, // Valeur initiale du toggle (désactivé)
 };
