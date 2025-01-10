@@ -84,20 +84,12 @@
 
 }
 
-
-
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--default-font-color);
 }
 
-@layer base {
-    .text {
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-    }
-    
+@layer base {    
     /* Main Title */
     .main-title {
         font-size: var(--main-title-font-size);

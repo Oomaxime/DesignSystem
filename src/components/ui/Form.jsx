@@ -30,7 +30,7 @@ export default function Form({ children, onSubmit, h1 = "Title", h2 = "", button
         </Button>
 
         {link && (
-          <p className={`text-${link.align}`}>
+          <p className={`text-${link.align || "end"}`}>
             {link.pretext}
             <Link to={link.url} className="text-blue-500 hover:underline">
               {link.text}
