@@ -17,14 +17,15 @@ export default function MainLayout() {
   };
 
   return (
-    <main className="flex flex-col h-screen py-10 md:flex-row">
-      <aside className="flex flex-col justify-between items-center w-1/10 text-center min-w-52 border-r">
+    <main className="pl-52 flex flex-col h-screen py-10 md:flex-row">
+      <aside className=" fixed top-[5%] bottom-[5%] left-0 h-[90%] flex flex-col justify-between items-center w-1/10 text-center min-w-52 border-r">
         <Avatar/>
+
         <div>
-          <Link to="/privacy-policy" className="underline hidden md:block">
+          <Link to="/privacy-policy" className="text-black underline hidden md:block">
             Privacy Policy
           </Link>
-          <Link to="/terms-conditions" className="underline hidden md:block">
+          <Link to="/terms-conditions" className="text-black underline hidden md:block">
             Terms & Conditions
           </Link>
         </div>
@@ -38,7 +39,7 @@ export default function MainLayout() {
           </Link>
           <Toggle isToggled={isDarkMode} onToggle={handleToggleChange} />
         </div>
-        <div className="pt-10 md:pt-0">
+        <div className="py-10 md:pt-0">
           <Outlet />
         </div>
       </div>

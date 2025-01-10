@@ -29,11 +29,9 @@ npm run storybook
 `http://localhost:6006/`
 
 
-## 🙇 Authors (WEB 2 E02)
-### Design Team:
+## Team E02 Web2:
 - [Louis Dondey](https://github.com/Kae134)
 - [Arnaud Fischer](https://github.com/Jeck0v)
-### Development Team:
 - [Hugo Martins](https://github.com/AkaTFL)
 - [Alexis Gontier](https://github.com/Alexis-Gontier)
 - [Maxime Bidan](https://github.com/Oomaxime)

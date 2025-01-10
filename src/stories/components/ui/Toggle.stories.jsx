@@ -1,4 +1,5 @@
 import Toggle from "../../../components/ui/Toggle";
+import { useState } from "react";
 
 export default {
   title: "Components/ui/Toggle",
@@ -12,7 +13,20 @@ export default {
   },
 };
 
-const Template = (args) => <Toggle {...args} />;
+const Template = (args) => {
+  const [isToggled, setIsToggled] = useState(args.isToggled);
+
+  return (
+    <Toggle
+      {...args}
+      isToggled={isToggled}
+      onToggle={() => {
+        setIsToggled(!isToggled);
+        args.onToggle();
+      }}
+    />
+  );
+};
 
 export const Default = Template.bind({});
 Default.args = {

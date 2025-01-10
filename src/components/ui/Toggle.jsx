@@ -27,8 +27,8 @@ export default function Toggle({ isToggled, onToggle }) {
             className="w-14 h-8 rounded-full transition-colors duration-300 flex items-center justify-between px-1"
             style={{
               backgroundColor: isToggled
-                ? "var(--cta-primary-bg-hover)"
-                : "var(--cta-primary-bg-default)",
+                ? "var(--toggle-pin-bg)"
+                : "var(--toggle-bg)",
             }}
           >
             <div className="flex items-center justify-center w-6 h-6">
@@ -44,7 +44,7 @@ export default function Toggle({ isToggled, onToggle }) {
               className="absolute w-6 h-6 rounded-full transition-transform duration-300 transform flex items-center justify-center"
               style={{
                 transform: isToggled ? "translateX(0)" : "translateX(24px)",
-                backgroundColor: isToggled ? "var(--toggle-pin-bg)" : "var(--toggle-bg)",
+                backgroundColor: isToggled ? "var(--dark-toggle-pin-bg)" : "var(--dark-toggle-bg)",
                 boxShadow: "var(--toggle-shadow)",
               }}
             ></div>
