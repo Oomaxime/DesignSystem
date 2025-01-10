@@ -8,13 +8,13 @@
     --default-bg-color: #fff;
 
     --dark-font-color: #fff;
-    --dark-bg-color: #000;
+    --dark-bg-color: #070810;
 
     /* CTA */
     /* ================================== */
-    --cta-primary-bg-default: #0B2D46;
-    --cta-primary-bg-hover: #0A649A;
-    --cta-primary-bg-inactive: #83CFF9;
+    --cta-primary-bg-default: #20274C;
+    --cta-primary-bg-hover: #33449A;
+    --cta-primary-bg-inactive: #A2C1EE;
 
     --cta-primary-border-radius: 12px;
 

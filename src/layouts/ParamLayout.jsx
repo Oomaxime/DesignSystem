@@ -39,7 +39,7 @@ export default function MainLayout() {
           </Link>
           <Toggle isToggled={isDarkMode} onToggle={handleToggleChange} />
         </div>
-        <div className="pt-10 md:pt-0">
+        <div className="py-10 md:pt-0">
           <Outlet />
         </div>
       </div>
