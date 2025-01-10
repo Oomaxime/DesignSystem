@@ -5,7 +5,7 @@ import imgWebp from "../assets/images/bg.webp";
 export default function FormLayout() {
   return (
     <main className="flex flex-col-reverse md:flex-row md:min-w-screen">
-      <aside className="flex justify-center items-center p-6 md:h-screen md:px-16 md:pt-32 md:justify-normal md:block">
+      <aside className="flex justify-center items-center p-24 md:h-screen md:pt-32 md:justify-normal md:block">
         <Outlet/>
       </aside>
       <aside className="h-3/10 md:w-1/2 md:h-screen flex-grow">

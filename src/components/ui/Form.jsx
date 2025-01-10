@@ -12,7 +12,7 @@ export default function Form({ children, onSubmit, h1 = "Title", h2 = "", button
       className={defaultClasses}
     >
       <div className="flex flex-col gap-3">
-        <h1 className="text-3xl font-bold text-center">
+        <h1>
           <Text type="main-title">
             {h1}
           </Text>
@@ -36,7 +36,7 @@ export default function Form({ children, onSubmit, h1 = "Title", h2 = "", button
         {link && (
           <p className={`text-${link.align || "end"}`}>
             {link.pretext}
-            <Link to={link.url} className="text-blue-500 hover:underline">
+            <Link to={link.url} className="text-blue-500 hover:underline text-end">
               {link.text}
             </Link>
           </p>
