@@ -45,7 +45,7 @@ export default function Input({
       <div className="relative">
         <input
           id={id}
-          className={`${defaultClasses} ${localError ? "border-error" : ""}`}
+          className={`${defaultClasses} ${localError ? "border-[2px] border-error" : ""}`}
           type={type === "password" && !showPassword ? "password" : "text"}
           placeholder={placeholder}
           value={value}
