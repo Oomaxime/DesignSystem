@@ -22,7 +22,7 @@ export default function Avatar({ pseudo, img, imgWebp }) {
                     {pseudo || "John Doe"}
                 </Text>
                 </p>
-                <Link to="/logout" className="underline">
+                <Link to="/" className="underline">
                     Logout
                 </Link>
             </div>
