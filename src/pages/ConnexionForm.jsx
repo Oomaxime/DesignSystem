@@ -19,7 +19,7 @@ export default function ConnexionForm() {
           id="email"
           label="Email"
           type="email"
-          placeholder="Enter your email"
+          placeholder="votre@mail.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -27,7 +27,7 @@ export default function ConnexionForm() {
           id="password"
           label="Password"
           type="password"
-          placeholder="Enter your password"
+          placeholder="********"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
