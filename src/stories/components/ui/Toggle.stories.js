@@ -13,17 +13,8 @@ export default {
   },
 };
 
-const Template = (args) => {
-  const [isToggled, setIsToggled] = useState(false);
 
-  const handleToggle = (newState) => {
-    setIsToggled(newState);
-  };
 
-  return <Toggle {...args} isToggled={isToggled} onToggle={handleToggle} />;
-};
-
-export const Default = Template.bind({});
-Default.args = {
+export const Default = {
   isToggled: false,
 };
