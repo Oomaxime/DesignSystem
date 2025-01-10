@@ -1,21 +1,22 @@
-import Form from '../components/ui/Form'
-import Input from '../components/ui/Input'
-import { useState } from 'react'
+import Form from "../components/ui/Form";
+import Input from "../components/ui/Input";
+import { useState } from "react";
 
 export default function UserForm() {
-  const [username, setUsername] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [rpassword, setRpassword] = useState('')
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [rpassword, setRpassword] = useState("");
 
   return (
     <Form
       onSubmit={(e) => {
-        e.preventDefault()
+        e.preventDefault();
       }}
       h1="Edit Profil."
       h2="Change your personal data."
       buttonText="Save"
+      path="/param/user"
     >
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-2">
@@ -67,5 +68,5 @@ export default function UserForm() {
         </div>
       </div>
     </Form>
-  )
+  );
 }

@@ -7,13 +7,15 @@ export default function ForgotPasswordForm() {
 
   return (
     <Form
-      onSubmit={(e) => {
-        e.preventDefault();
-        alert(`Recovery email sent to: ${email}`);
-      }}
       h1="Reset Password"
       buttonText="Send a recovery code"
-      link={{ pretext: "You have a account? ", align: "center", text: "Sign In", url: "/" }}
+      link={{
+        pretext: "You have a account? ",
+        align: "center",
+        text: "Sign In",
+        url: "/",
+      }}
+      path="/"
     >
       <div className="flex flex-col gap-3">
         <Input
