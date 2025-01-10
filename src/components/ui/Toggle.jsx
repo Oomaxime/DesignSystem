@@ -1,13 +1,9 @@
-import { useState } from "react";
-import moonIcon from "../../assets/icons/moon.svg";
 import sunIcon from "../../assets/icons/sun.svg";
+import moonIcon from "../../assets/icons/moon.svg";
 
-const Toggle = () => {
-  const [isToggled, setIsToggled] = useState(false);
-
+const Toggle = ({ isToggled, onToggle }) => {
   const handleToggle = () => {
-    setIsToggled(!isToggled);
-    console.log(isToggled);
+    onToggle(!isToggled); // On appelle la fonction onToggle en passant la valeur inversée
   };
 
   return (
@@ -26,26 +22,21 @@ const Toggle = () => {
               <img
                 src={sunIcon}
                 alt="Sun Icon"
-                className={`w-6 h-6 transition-opacity duration-1000 ${
-                  isToggled ? "opacity-0" : "opacity-100"
-                }`}
+                className={`w-6 h-6 transition-opacity duration-1000 ${isToggled ? "opacity-0" : "opacity-100"}`}
               />
             </div>
             <div
               className={`absolute w-6 h-6 bg-blue-200 rounded-full transition-transform duration-300 transform flex items-center justify-center ${
                 isToggled ? "translate-x-0 bg-gray-800" : "translate-x-6"
               }`}
-            >
-            </div>
-            <div className=" flex items-center justify-center w-6 h-6">
+            ></div>
+            <div className="flex items-center justify-center w-6 h-6">
               <img
                 src={moonIcon}
                 alt="Moon Icon"
-                className={`w-4 h-4 transition-opacity ${
-                  isToggled ? "opacity-100" : "opacity-0"
-                }`}
+                className={`w-4 h-4 transition-opacity ${isToggled ? "opacity-100" : "opacity-0"}`}
               />
-              </div>
+            </div>
           </div>
         </label>
       </div>

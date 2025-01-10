@@ -1,9 +1,21 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom";
 import imgWebp from "../assets/images/bg.webp";
 import img from "../assets/images/bg.avif";
+import { useState } from "react";
 import Toggle from "../components/ui/Toggle";
 
 export default function MainLayout() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const handleToggleChange = (newState) => {
+    setIsDarkMode(newState);
+    if (newState) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  };
+
   return (
     <main className="flex h-screen py-10">
       <aside className="flex flex-col justify-between items-center w-1/10 text-center min-w-52">
@@ -18,10 +30,14 @@ export default function MainLayout() {
             />
           </picture>
           <p className="font-bold py-2">John Doe</p>
-          <a href ="" className="underline">Logout</a>
+          <a href="" className="underline">
+            Logout
+          </a>
         </div>
         <div>
-          <p className="underline">Privacy Policy <br/> Terms & Conditions</p>
+          <p className="underline">
+            Privacy Policy <br /> Terms & Conditions
+          </p>
         </div>
       </aside>
 
@@ -29,12 +45,13 @@ export default function MainLayout() {
 
       <div className="w-screen flex flex-col gap-20 items-center">
         <div className="flex justify-between w-full px-8">
-          <a href="../" className="underline">Back</a>
-          <Toggle/>
+          <a href="../" className="underline">
+            Back
+          </a>
+          <Toggle isToggled={isDarkMode} onToggle={handleToggleChange} />
         </div>
-        <Outlet/>
+        <Outlet />
       </div>
-
     </main>
-  )
+  );
 }
