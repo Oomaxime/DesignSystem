@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const Avatar = ({ name }) => {
   // Fonction pour extraire les initiales
@@ -11,7 +11,12 @@ const Avatar = ({ name }) => {
   const initials = getInitials(name);
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100"
+      height="100"
+      viewBox="0 0 100 100"
+    >
       {/* Fond circulaire */}
       <circle cx="50" cy="50" r="50" fill="#83CFF6" />
       {/* Texte des initiales */}
@@ -28,6 +33,10 @@ const Avatar = ({ name }) => {
       </text>
     </svg>
   );
+};
+
+Avatar.propTypes = {
+  name: PropTypes.string,
 };
 
 export default Avatar;

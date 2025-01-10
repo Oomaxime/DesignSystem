@@ -1,16 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Layouts
-import MainLayout from "./layouts/MainLayout"
-import FormLayout from "./layouts/FormLayout"
-import ParamLayout from "./layouts/ParamLayout"
+import FormLayout from "./layouts/FormLayout";
+import ParamLayout from "./layouts/ParamLayout";
 
 // Pages
-import Home from "./pages/Home"
-import NotFound from "./pages/NotFound"
-import ConnexionForm from "./pages/ConnexionForm"
-import ForgotPasswordForm from "./pages/ForgotPasswordForm"
-import UserForm from "./pages/UserForm"
+import NotFound from "./pages/NotFound";
+import ConnexionForm from "./pages/ConnexionForm";
+import ForgotPasswordForm from "./pages/ForgotPasswordForm";
+import UserForm from "./pages/UserForm";
 
 function App() {
   return (
@@ -19,10 +17,6 @@ function App() {
         <Route element={<FormLayout />}>
           <Route index element={<ConnexionForm />} />
           <Route path="forgotpassword" element={<ForgotPasswordForm />} />
-        </Route>
-
-        <Route path="home" element={<MainLayout />}>
-          <Route index element={<Home />} />
         </Route>
 
         <Route path="param" element={<ParamLayout />}>
