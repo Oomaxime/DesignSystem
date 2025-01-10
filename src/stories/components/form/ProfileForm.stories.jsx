@@ -25,10 +25,6 @@ export default {
       control: { type: "text" },
       description: "Submit button text.",
     },
-    link: {
-      control: { type: "object" },
-      description: "Link displayed below the button, with text and URL.",
-    },
     onSubmit: {
       action: "submitted",
       description: "Callback called when the form is submitted.",
@@ -43,24 +39,41 @@ export default {
 const Template = (args) => (
   <Form {...args}>
     <Input
+      label="Username"
+      id="username"
+      type="text"
+      placeholder="Enter your username"
+      onChange={() => {}}
+    />
+    <Input
       label="Email"
       id="email"
       type="email"
       placeholder="votre@mail.com"
       onChange={() => {}}
     />
+    <Input
+      label="Password"
+      id="password"
+      type="password"
+      placeholder="********"
+      onChange={() => {}}
+    />
+    <Input
+      label="Confirm Password"
+      id="confirmPassword"
+      type="password"
+      placeholder="********"
+      onChange={() => {}}
+    />
   </Form>
 );
 
 // Story : Formulaire de connexion
-export const ResetPassForm = Template.bind({});
-ResetPassForm.args = {
-  h1: "Reset Password.",
-  buttonText: "Send a recovery code",
-  link: {
-    text: "Sign In.",
-    url: "/",
-    align: "end",
-  },
-  path: "/",
+export const ProfileForm = Template.bind({});
+ProfileForm.args = {
+  h1: "Edit Profile.",
+  h2: "Change your personal data.",
+  buttonText: "Save",
+  path: "/param/user",
 };

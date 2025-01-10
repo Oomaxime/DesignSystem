@@ -15,27 +15,27 @@ export default {
   argTypes: {
     h1: {
       control: { type: "text" },
-      description: "Le titre principal (H1) du formulaire.",
+      description: "The main title (H1) of the form.",
     },
     h2: {
       control: { type: "text" },
-      description: "Le sous-titre (H2) du formulaire.",
+      description: "The subtitle (H2) of the form.",
     },
     buttonText: {
       control: { type: "text" },
-      description: "Texte du bouton de soumission.",
+      description: "Submit button text.",
     },
     link: {
       control: { type: "object" },
-      description: "Lien affiché sous le bouton, avec un texte et une URL.",
+      description: "Link displayed below the button, with text and URL.",
     },
     onSubmit: {
       action: "submitted",
-      description: "Callback appelé lors de la soumission du formulaire.",
+      description: "Callback called when the form is submitted.",
     },
     path: {
       control: { type: "text" },
-      description: "Chemin vers la page de destination après la soumission.",
+      description: "Path to destination page after submission.",
     },
   },
 };
